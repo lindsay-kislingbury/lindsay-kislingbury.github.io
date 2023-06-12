@@ -197,7 +197,7 @@
 
     ,
         "url" : "https:\/\/\u003clindsay-kislingbury\u003e.github.io\/post\/hugo-deployment\/",
-        "wordCount" : "906",
+        "wordCount" : "915",
         "genre" : [ ],
         "keywords" : [ 
       
@@ -432,8 +432,9 @@ I struggled finding a good explanation online when attempting to do this. Publis
 <p>Follow the instructions from hugo docs to install <a href="https://gohugo.io/installation/">hugo</a></p>
 <h2 id="2-create-a-site">2. Create a site</h2>
 <p>Navigate to the directory where you will be storing the repository. Open a git bash terminal and run the following command to create a new hugo site.</p>
-<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>hugo new site linds-codes
-</span></span></code></pre></div><p>Folder Structure should look like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new site linds-codes
+</span></span></code></pre></div><p>replace <code>linds-codes</code> with a name for your source repo</p>
+<p>Folder Structure should look like this:</p>
 <div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>  /Users/linds/sites/linds-codes/
 </span></span><span style="display:flex;"><span>  ├── archetypes
 </span></span><span style="display:flex;"><span>  ├── assets
@@ -449,12 +450,12 @@ I struggled finding a good explanation online when attempting to do this. Publis
 <div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>  git init
 </span></span></code></pre></div><h2 id="3-choose-a-theme">3. Choose a Theme</h2>
 <p>Find a theme from the <a href="https://themes.gohugo.io/">official list</a></p>
-<p>I chose the Anatole theme.</p>
+<p>I chose the <a href="https://themes.gohugo.io/themes/anatole/">Anatole</a> theme.</p>
 <p>Click <code>download</code> to be redirected the theme&rsquo;s github repository.<br>
 The theme will have a readme or docs, with instructions on how to use the theme.</p>
 <p><strong>FORKING THE THEME</strong>:<br>
 To prevent headaches with git if you want to edit the base theme directly, fork the theme repository.</p>
-<p>Get the url of you&rsquo;re fork of the theme. My fork of anatole is located at:
+<p>Get the url of your fork of the theme. My fork of anatole is located at:
 <code>https://github.com/lindsay-kislingbury/anatole</code><br>
 <img src="/images/posts/fork2.PNG"></p>
 <p>We want to use the theme as a git submodule.<br>
