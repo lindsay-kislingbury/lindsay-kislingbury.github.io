@@ -28,8 +28,8 @@
     
     <link
       rel="stylesheet"
-      href="/scss/main.min.8b2a2113146a9351b3ae257c5b559c0dd17d701d16bec255669126bdbcc1bdd4.css"
-      integrity="sha256-iyohExRqk1GzriV8W1WcDdF9cB0WvsJVZpEmvbzBvdQ="
+      href="/scss/main.min.fcabebb43699aeef0a20af735764e68b5e1b2e8879df0d56bb93da5321b1ca86.css"
+      integrity="sha256-/KvrtDaZru8KIK9zV2Tmi14bLoh53w1Wu5PaUyGxyoY="
       crossorigin="anonymous"
       type="text/css"
     />
@@ -114,13 +114,13 @@
 <meta name="twitter:image" content="https://.github.io/images/site-feature-image.png"/>
 
 <meta name="twitter:title" content="Cinema: Completing A Project"/>
-<meta name="twitter:description" content="My first attempt at styling a web page. At first, I was tempted to use bootstrap, but ultimately went with html/css only."/>
+<meta name="twitter:description" content="This will be my first attempt at styling a web page."/>
 
 
 
   
   <meta property="og:title" content="Cinema: Completing A Project" />
-<meta property="og:description" content="My first attempt at styling a web page. At first, I was tempted to use bootstrap, but ultimately went with html/css only." />
+<meta property="og:description" content="This will be my first attempt at styling a web page." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://&lt;lindsay-kislingbury&gt;.github.io/post/cinema-3/" /><meta property="og:image" content="https://.github.io/images/site-feature-image.png"/><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-11-12T21:47:41+00:00" />
@@ -142,7 +142,7 @@
         "alternativeHeadline": "",
         "description": "
       
-        My first attempt at styling a web page. At first, I was tempted to use bootstrap, but ultimately went with html\/css only.
+        This will be my first attempt at styling a web page.
 
 
       
@@ -197,7 +197,7 @@
 
     ,
         "url" : "https:\/\/\u003clindsay-kislingbury\u003e.github.io\/post\/cinema-3\/",
-        "wordCount" : "448",
+        "wordCount" : "450",
         "genre" : [ ],
         "keywords" : [ 
       
@@ -402,10 +402,6 @@
     "
   >
     
-      <div class="post__thumbnail-wrapper">
-        <img class="post__thumbnail" src="/images/posts/expressnode.png" alt="Thumbnail image" />
-      </div>
-    
     <div class="post__content">
       <h1>Cinema: Completing a Project</h1>
       
@@ -426,14 +422,18 @@
             <span class="post__meta-text">3-minute read</span>
           </li>
         </ul>
-      <h2 id="my-first-attempt-at-styling-a-web-page">My first attempt at styling a web page.</h2>
-<p>At first, I was tempted to use bootstrap, but ultimately went with html/css only. I want to build a good foundation in the basics.</p>
-<h2 id="goals">Goals</h2>
+      <p>This will be my first attempt at styling a web page.  <br>
+Initally, I was tempted to use bootstrap, but ultimately went with html/css only. I want to build a good foundation in the basics.</p>
+<hr>
+<h1 id="goals">Goals</h1>
+<hr>
 <ul>
 <li>Style the two html pages so that they are intuitive, clear, and functional.</li>
 <li><strong>Complete</strong> the project, even if it isn&rsquo;t 100% perfect.</li>
 </ul>
-<h2 id="so-many-flexboxes">So&hellip; Many&hellip; Flexboxes</h2>
+<hr>
+<h1 id="so-many-flexboxes">So&hellip; Many&hellip; Flexboxes</h1>
+<hr>
 <ul>
 <li>
 <p>I cannot overstate how helpful this guide <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-background">A Complete Guide to Flexbox</a> was for learning how to use flexboxes. I relied almost entirely on this guide.</p>
@@ -449,7 +449,9 @@
 <img src="/images/posts/cinemaV3.png"></p>
 </li>
 </ul>
-<h2 id="expanding-divs">Expanding Divs</h2>
+<hr>
+<h1 id="expanding-divs">Expanding Divs</h1>
+<hr>
 <ul>
 <li>
 <p>I struggled to find the best way to display so much data on the results page effectively. If a user returned a search with more than 4 movies, the list of results became very large.</p>
@@ -462,33 +464,35 @@
 <p>Here is a look at how the data sent from the server to the results page is accessed with EJS:</p>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="o">&lt;%</span> <span class="k">if</span><span class="p">(</span><span class="nx">searchResults</span><span class="p">.</span><span class="nx">matchFound</span><span class="p">)</span> <span class="p">{</span> <span class="o">%&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="nx">ul</span> <span class="kr">class</span> <span class="o">=</span> <span class="s2">&#34;flex-results-container&#34;</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="o">&lt;%</span> <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="p">((</span><span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">31</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">searchResults</span><span class="p">.</span><span class="nx">bestMatches</span><span class="p">.</span><span class="nx">length</span><span class="p">));</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="o">%&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="o">&lt;</span><span class="nx">li</span> <span class="kr">class</span> <span class="o">=</span> <span class="nx">flex</span><span class="o">-</span><span class="nx">result</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl">                    <span class="o">&lt;</span><span class="nx">details</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl">                        <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl">                        <span class="o">&lt;</span><span class="nx">b</span><span class="o">&gt;</span><span class="nx">Release</span> <span class="nb">Date</span><span class="o">:</span> <span class="o">&lt;</span><span class="err">/b&gt;&lt;%-searchResults.bestMatches[i].releaseDate; %&gt; &lt;br&gt;</span>
-</span></span><span class="line"><span class="cl">                        <span class="o">&lt;</span><span class="nx">b</span><span class="o">&gt;</span><span class="nx">Original</span> <span class="nx">Language</span><span class="o">:</span> <span class="o">&lt;</span><span class="err">/b&gt;&lt;%-searchResults.bestMatches[i].language; %&gt;&lt;br&gt;</span>
-</span></span><span class="line"><span class="cl">                        <span class="o">&lt;</span><span class="nx">b</span><span class="o">&gt;</span><span class="nx">Run</span> <span class="nx">Time</span><span class="o">:</span> <span class="o">&lt;</span><span class="err">/b&gt;&lt;%-searchResults.bestMatches[i].runtime; %&gt; minutes &lt;br&gt;</span>
-</span></span><span class="line"><span class="cl">                        <span class="o">&lt;</span><span class="nx">b</span><span class="o">&gt;</span><span class="nx">Overview</span><span class="o">:</span> <span class="o">&lt;</span><span class="err">/b&gt;&lt;%-searchResults.bestMatches[i].overview; %&gt; &lt;br&gt;</span>
-</span></span><span class="line"><span class="cl">                        <span class="o">&lt;</span><span class="nx">b</span><span class="o">&gt;</span><span class="nx">Genres</span><span class="o">:</span> <span class="o">&lt;</span><span class="err">/b&gt;&lt;% for(var j=0; j &lt; searchResults.bestMatches[i].genres.length; j++) { %&gt;</span>
-</span></span><span class="line"><span class="cl">                            <span class="o">&lt;%-</span> <span class="nx">searchResults</span><span class="p">.</span><span class="nx">bestMatches</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">genres</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">%&gt;</span>
-</span></span><span class="line"><span class="cl">                        <span class="o">&lt;%</span> <span class="p">}</span> <span class="o">%&gt;</span> <span class="o">&lt;</span><span class="nx">br</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl">                        <span class="o">&lt;</span><span class="nx">b</span><span class="o">&gt;</span><span class="nx">Tags</span><span class="o">:</span> <span class="o">&lt;</span><span class="err">/b&gt; &lt;% for(var j=0; j &lt; searchResults.bestMatches[i].keywords.length; j++) { %&gt;</span>
-</span></span><span class="line"><span class="cl">                            <span class="o">&lt;%-</span> <span class="nx">searchResults</span><span class="p">.</span><span class="nx">bestMatches</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">keywords</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">%&gt;</span>
-</span></span><span class="line"><span class="cl">                        <span class="o">&lt;%</span> <span class="p">}</span> <span class="o">%&gt;</span> 
-</span></span><span class="line"><span class="cl">                        <span class="o">&lt;</span><span class="err">/p&gt;</span>
-</span></span><span class="line"><span class="cl">                    <span class="o">&lt;</span><span class="nx">summary</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl">                        <span class="o">&lt;</span><span class="nx">h3</span><span class="o">&gt;</span> <span class="o">&lt;%-</span><span class="nx">searchResults</span><span class="p">.</span><span class="nx">bestMatches</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">title</span><span class="p">;</span> <span class="o">%&gt;</span> <span class="o">&lt;</span><span class="err">/h3&gt;</span>
-</span></span><span class="line"><span class="cl">                        <span class="o">&lt;</span><span class="nx">br</span><span class="o">&gt;&lt;%-</span><span class="nx">searchResults</span><span class="p">.</span><span class="nx">bestMatches</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">tagline</span><span class="p">;</span> <span class="o">%&gt;</span>
-</span></span><span class="line"><span class="cl">                    <span class="o">&lt;</span><span class="err">/summary&gt;   </span>
-</span></span><span class="line"><span class="cl">                    <span class="o">&lt;</span><span class="err">/details&gt;</span>
-</span></span><span class="line"><span class="cl">                <span class="o">&lt;</span><span class="err">/li&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="o">&lt;%</span> <span class="p">}</span> <span class="o">%&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="o">&lt;%</span> <span class="p">}</span> <span class="o">%&gt;</span>
-</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="err">/ul&gt;</span>
-</span></span></code></pre></div><h2 id="what-ive-learned">What I&rsquo;ve Learned</h2>
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#bc74c4">&lt;%</span> <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>searchResults<span style="color:#56b6c2">.</span>matchFound<span style="color:#56b6c2">)</span> <span style="color:#56b6c2">{</span> <span style="color:#bc74c4">%&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#bc74c4">&lt;</span>ul <span style="color:#7fbaf5">class</span> <span style="color:#bc74c4">=</span> <span style="color:#82cc6a">&#34;flex-results-container&#34;</span><span style="color:#bc74c4">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#bc74c4">&lt;%</span> <span style="color:#7fbaf5">for</span><span style="color:#56b6c2">(</span><span style="color:#7fbaf5">var</span> i<span style="color:#bc74c4">=</span><span style="color:#56b6c2">0</span><span style="color:#56b6c2">;</span> <span style="color:#56b6c2">((</span>i <span style="color:#bc74c4">&lt;</span> <span style="color:#56b6c2">31</span><span style="color:#56b6c2">)</span> <span style="color:#bc74c4">&amp;&amp;</span> <span style="color:#56b6c2">(</span>i <span style="color:#bc74c4">&lt;</span> searchResults<span style="color:#56b6c2">.</span>bestMatches<span style="color:#56b6c2">.</span>length<span style="color:#56b6c2">));</span> i<span style="color:#bc74c4">++</span><span style="color:#56b6c2">)</span> <span style="color:#56b6c2">{</span> <span style="color:#bc74c4">%&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#bc74c4">&lt;</span>li <span style="color:#7fbaf5">class</span> <span style="color:#bc74c4">=</span> flex<span style="color:#bc74c4">-</span>result<span style="color:#bc74c4">&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#bc74c4">&lt;</span>details<span style="color:#bc74c4">&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#bc74c4">&lt;</span>p<span style="color:#bc74c4">&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#bc74c4">&lt;</span>b<span style="color:#bc74c4">&gt;</span>Release <span style="color:#7fbaf5">Date</span><span style="color:#bc74c4">:</span> <span style="color:#bc74c4">&lt;</span><span style="color:#cf5967">/b&gt;&lt;%-searchResults.bestMatches[i].releaseDate; %&gt; &lt;br&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#bc74c4">&lt;</span>b<span style="color:#bc74c4">&gt;</span>Original Language<span style="color:#bc74c4">:</span> <span style="color:#bc74c4">&lt;</span><span style="color:#cf5967">/b&gt;&lt;%-searchResults.bestMatches[i].language; %&gt;&lt;br&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#bc74c4">&lt;</span>b<span style="color:#bc74c4">&gt;</span>Run Time<span style="color:#bc74c4">:</span> <span style="color:#bc74c4">&lt;</span><span style="color:#cf5967">/b&gt;&lt;%-searchResults.bestMatches[i].runtime; %&gt; minutes &lt;br&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#bc74c4">&lt;</span>b<span style="color:#bc74c4">&gt;</span>Overview<span style="color:#bc74c4">:</span> <span style="color:#bc74c4">&lt;</span><span style="color:#cf5967">/b&gt;&lt;%-searchResults.bestMatches[i].overview; %&gt; &lt;br&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#bc74c4">&lt;</span>b<span style="color:#bc74c4">&gt;</span>Genres<span style="color:#bc74c4">:</span> <span style="color:#bc74c4">&lt;</span><span style="color:#cf5967">/b&gt;&lt;% for(var j=0; j &lt; searchResults.bestMatches[i].genres.length; j++) { %&gt;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#bc74c4">&lt;%-</span> searchResults<span style="color:#56b6c2">.</span>bestMatches<span style="color:#56b6c2">[</span>i<span style="color:#56b6c2">].</span>genres<span style="color:#56b6c2">[</span>j<span style="color:#56b6c2">]</span> <span style="color:#bc74c4">%&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#bc74c4">&lt;%</span> <span style="color:#56b6c2">}</span> <span style="color:#bc74c4">%&gt;</span> <span style="color:#bc74c4">&lt;</span>br<span style="color:#bc74c4">&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#bc74c4">&lt;</span>b<span style="color:#bc74c4">&gt;</span>Tags<span style="color:#bc74c4">:</span> <span style="color:#bc74c4">&lt;</span><span style="color:#cf5967">/b&gt; &lt;% for(var j=0; j &lt; searchResults.bestMatches[i].keywords.length; j++) { %&gt;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#bc74c4">&lt;%-</span> searchResults<span style="color:#56b6c2">.</span>bestMatches<span style="color:#56b6c2">[</span>i<span style="color:#56b6c2">].</span>keywords<span style="color:#56b6c2">[</span>j<span style="color:#56b6c2">]</span> <span style="color:#bc74c4">%&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#bc74c4">&lt;%</span> <span style="color:#56b6c2">}</span> <span style="color:#bc74c4">%&gt;</span> 
+</span></span><span style="display:flex;"><span>                        <span style="color:#bc74c4">&lt;</span><span style="color:#cf5967">/p&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#bc74c4">&lt;</span>summary<span style="color:#bc74c4">&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#bc74c4">&lt;</span>h3<span style="color:#bc74c4">&gt;</span> <span style="color:#bc74c4">&lt;%-</span>searchResults<span style="color:#56b6c2">.</span>bestMatches<span style="color:#56b6c2">[</span>i<span style="color:#56b6c2">].</span>title<span style="color:#56b6c2">;</span> <span style="color:#bc74c4">%&gt;</span> <span style="color:#bc74c4">&lt;</span><span style="color:#cf5967">/h3&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#bc74c4">&lt;</span>br<span style="color:#bc74c4">&gt;&lt;%-</span>searchResults<span style="color:#56b6c2">.</span>bestMatches<span style="color:#56b6c2">[</span>i<span style="color:#56b6c2">].</span>tagline<span style="color:#56b6c2">;</span> <span style="color:#bc74c4">%&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#bc74c4">&lt;</span><span style="color:#cf5967">/summary&gt;   </span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#bc74c4">&lt;</span><span style="color:#cf5967">/details&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#bc74c4">&lt;</span><span style="color:#cf5967">/li&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#bc74c4">&lt;%</span> <span style="color:#56b6c2">}</span> <span style="color:#bc74c4">%&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#bc74c4">&lt;%</span> <span style="color:#56b6c2">}</span> <span style="color:#bc74c4">%&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#bc74c4">&lt;</span><span style="color:#cf5967">/ul&gt;</span>
+</span></span></code></pre></div><hr>
+<h1 id="what-ive-learned">What I&rsquo;ve Learned</h1>
+<hr>
 <ul>
 <li>Going into the project with zero experience with web development, I knew that the learning curve would be sharp. I spent a lot of time on this project reading documentation and had to adjust my expectations for the finished product a lot.</li>
 <li>I&rsquo;ve learned the fundamentals of HTTP methods, Express Routing and HTML.</li>

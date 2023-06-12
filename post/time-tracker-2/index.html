@@ -28,8 +28,8 @@
     
     <link
       rel="stylesheet"
-      href="/scss/main.min.8b2a2113146a9351b3ae257c5b559c0dd17d701d16bec255669126bdbcc1bdd4.css"
-      integrity="sha256-iyohExRqk1GzriV8W1WcDdF9cB0WvsJVZpEmvbzBvdQ="
+      href="/scss/main.min.fcabebb43699aeef0a20af735764e68b5e1b2e8879df0d56bb93da5321b1ca86.css"
+      integrity="sha256-/KvrtDaZru8KIK9zV2Tmi14bLoh53w1Wu5PaUyGxyoY="
       crossorigin="anonymous"
       type="text/css"
     />
@@ -114,13 +114,13 @@
 <meta name="twitter:image" content="https://.github.io/images/site-feature-image.png"/>
 
 <meta name="twitter:title" content="Time Tracker: Gaining Momentum"/>
-<meta name="twitter:description" content="Wow! The progress that I&rsquo;m making on this project is proof of that I&rsquo;m learning to tackle problems more efficiently."/>
+<meta name="twitter:description" content="The Time Tracker is already in a fully functional state! I&rsquo;m very happy with my progress on this project."/>
 
 
 
   
   <meta property="og:title" content="Time Tracker: Gaining Momentum" />
-<meta property="og:description" content="Wow! The progress that I&rsquo;m making on this project is proof of that I&rsquo;m learning to tackle problems more efficiently." />
+<meta property="og:description" content="The Time Tracker is already in a fully functional state! I&rsquo;m very happy with my progress on this project." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://&lt;lindsay-kislingbury&gt;.github.io/post/time-tracker-2/" /><meta property="og:image" content="https://.github.io/images/site-feature-image.png"/><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2023-06-10T21:47:41+00:00" />
@@ -142,7 +142,7 @@
         "alternativeHeadline": "",
         "description": "
       
-        Wow! The progress that I\u0026rsquo;m making on this project is proof of that I\u0026rsquo;m learning to tackle problems more efficiently.
+        The Time Tracker is already in a fully functional state! I\u0026rsquo;m very happy with my progress on this project.
 
 
       
@@ -197,7 +197,7 @@
 
     ,
         "url" : "https:\/\/\u003clindsay-kislingbury\u003e.github.io\/post\/time-tracker-2\/",
-        "wordCount" : "663",
+        "wordCount" : "641",
         "genre" : [ ],
         "keywords" : [ 
       
@@ -416,10 +416,6 @@
     "
   >
     
-      <div class="post__thumbnail-wrapper">
-        <img class="post__thumbnail" src="/images/posts/timetracker.png" alt="Thumbnail image" />
-      </div>
-    
     <div class="post__content">
       <h1>Time Tracker: Gaining Momentum</h1>
       
@@ -440,93 +436,93 @@
             <span class="post__meta-text">4-minute read</span>
           </li>
         </ul>
-      <p>Wow! The progress that I&rsquo;m making on this project is proof of that I&rsquo;m learning to tackle problems more efficiently. I&rsquo;m starting to understand how to ask the right questions when researching a problem, and I&rsquo;m feeling less overwhelmed by learning new technologies.</p>
-<p>The Time Tracker is already in a fully functional state. However, it is very basic. I have several ideas about how to expand the project before moving on to the next challenge.</p>
+      <p>The Time Tracker is already in a fully functional state! I&rsquo;m very happy with my progress on this project. Feels like I&rsquo;m starting to gain momentum in learning how to solve problems and pick up new things. I have some ideas about how to expand the project before moving on to the next challenge.</p>
 <p><strong>Desktop view</strong>
 <img src="/images/posts/timer-dashboard.PNG"></p>
 <p><strong>Mobile view</strong>
 <img src="/images/posts/timer-phone.PNG" height="600"></p>
-<h2 id="progress">Progress</h2>
-<ul>
-<li>
-<p><strong>Javascript Stopwatch</strong> <br>
-The stopwach is styled with boostrap and a little extra CSS for padding, sizing, and responsive breakpoints.</p>
-<p>I originally ran into some problems with <code>setInterval()</code> . The timer was running too fast, and after doing some research, I found that relying on setInterval() for extact time down to the milliseconds wasn&rsquo;t a good approach, I couldn&rsquo;t completely rely on the browser.</p>
-<p>I decided to write a function that checks for the current time every time I call setInterval, if they are not equal, I subtract the difference.</p>
+<hr>
+<h1 id="javascript-stopwatch">Javascript Stopwatch</h1>
+<hr>
+<p>The stopwach is styled with boostrap and a little extra CSS for padding, sizing, and responsive breakpoints.</p>
+<p>I originally ran into some problems with <code>setInterval()</code> . The timer was running too fast, and after doing some research, I found that relying on <code>setInterval()</code> for extact time down to the milliseconds wasn&rsquo;t a good approach, I couldn&rsquo;t completely rely on the browser.</p>
+<p>I decided to write a function that checks for the current time every time I call <code>setInterval()</code>, if they are not equal, I subtract the difference.</p>
 <p>Here&rsquo;s a look at that function:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl">  <span class="kd">function</span> <span class="nx">getShowTime</span><span class="p">(){</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">updatedTime</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">getTime</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">savedTime</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">difference</span> <span class="o">=</span> <span class="p">(</span><span class="nx">updatedTime</span> <span class="o">-</span> <span class="nx">startTime</span><span class="p">)</span> <span class="o">+</span> <span class="nx">savedTime</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">difference</span> <span class="o">=</span>  <span class="nx">updatedTime</span> <span class="o">-</span> <span class="nx">startTime</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">hours</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">((</span><span class="nx">difference</span> <span class="o">%</span> <span class="p">(</span><span class="mi">1000</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1000</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">minutes</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">((</span><span class="nx">difference</span> <span class="o">%</span> <span class="p">(</span><span class="mi">1000</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1000</span> <span class="o">*</span> <span class="mi">60</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">seconds</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">((</span><span class="nx">difference</span> <span class="o">%</span> <span class="p">(</span><span class="mi">1000</span> <span class="o">*</span> <span class="mi">60</span><span class="p">))</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">milliseconds</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">((</span><span class="nx">difference</span> <span class="o">%</span> <span class="p">(</span><span class="mi">1000</span> <span class="o">*</span> <span class="mi">60</span><span class="p">))</span> <span class="o">/</span> <span class="mi">100</span><span class="p">);</span><span class="nx">hours</span> <span class="o">=</span> <span class="p">(</span><span class="nx">hours</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="o">?</span> <span class="s2">&#34;0&#34;</span> <span class="o">+</span> <span class="nx">hours</span> <span class="o">:</span> <span class="nx">hours</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">minutes</span> <span class="o">=</span> <span class="p">(</span><span class="nx">minutes</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="o">?</span> <span class="s2">&#34;0&#34;</span> <span class="o">+</span> <span class="nx">minutes</span> <span class="o">:</span> <span class="nx">minutes</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">seconds</span> <span class="o">=</span> <span class="p">(</span><span class="nx">seconds</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="o">?</span> <span class="s2">&#34;0&#34;</span> <span class="o">+</span> <span class="nx">seconds</span> <span class="o">:</span> <span class="nx">seconds</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">milliseconds</span> <span class="o">=</span> <span class="p">(</span><span class="nx">milliseconds</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">)</span> <span class="o">?</span> <span class="p">(</span><span class="nx">milliseconds</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="o">?</span> <span class="s2">&#34;00&#34;</span> <span class="o">+</span> <span class="nx">milliseconds</span> <span class="o">:</span> <span class="s2">&#34;0&#34;</span> <span class="o">+</span> <span class="nx">milliseconds</span> <span class="o">:</span> <span class="nx">milliseconds</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">elapsedTime</span> <span class="o">=</span> <span class="nx">hours</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span> <span class="o">+</span> <span class="nx">minutes</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span> <span class="o">+</span> <span class="nx">seconds</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span> <span class="o">+</span> <span class="nx">milliseconds</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">timerDisplay</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">elapsedTime</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span></code></pre></div></li>
-<li>
-<p><strong>Storing The Data</strong><br>
-The model for a user includes an array of timestamp objects. The timestamp object includes a title, an array of tags, the date of creation, and the elapsed time. Currently, I am storing elapsed time with seperate hour, minute, second, and millisecond parts. I&rsquo;m unsure how I will eventually want to use this data when I generate charts and analytics so this will likely change.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>  <span style="color:#7fbaf5">function</span> getShowTime<span style="color:#56b6c2">(){</span>
+</span></span><span style="display:flex;"><span>    updatedTime <span style="color:#bc74c4">=</span> <span style="color:#7fbaf5">new</span> <span style="color:#7fbaf5">Date</span><span style="color:#56b6c2">().</span>getTime<span style="color:#56b6c2">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7fbaf5">if</span> <span style="color:#56b6c2">(</span>savedTime<span style="color:#56b6c2">){</span>
+</span></span><span style="display:flex;"><span>        difference <span style="color:#bc74c4">=</span> <span style="color:#56b6c2">(</span>updatedTime <span style="color:#bc74c4">-</span> startTime<span style="color:#56b6c2">)</span> <span style="color:#bc74c4">+</span> savedTime<span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#56b6c2">}</span> <span style="color:#7fbaf5">else</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>        difference <span style="color:#bc74c4">=</span>  updatedTime <span style="color:#bc74c4">-</span> startTime<span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>    hours <span style="color:#bc74c4">=</span> <span style="color:#7fbaf5">Math</span><span style="color:#56b6c2">.</span>floor<span style="color:#56b6c2">((</span>difference <span style="color:#bc74c4">%</span> <span style="color:#56b6c2">(</span><span style="color:#56b6c2">1000</span> <span style="color:#bc74c4">*</span> <span style="color:#56b6c2">60</span> <span style="color:#bc74c4">*</span> <span style="color:#56b6c2">60</span> <span style="color:#bc74c4">*</span> <span style="color:#56b6c2">24</span><span style="color:#56b6c2">))</span> <span style="color:#bc74c4">/</span> <span style="color:#56b6c2">(</span><span style="color:#56b6c2">1000</span> <span style="color:#bc74c4">*</span> <span style="color:#56b6c2">60</span> <span style="color:#bc74c4">*</span> <span style="color:#56b6c2">60</span><span style="color:#56b6c2">));</span>
+</span></span><span style="display:flex;"><span>    minutes <span style="color:#bc74c4">=</span> <span style="color:#7fbaf5">Math</span><span style="color:#56b6c2">.</span>floor<span style="color:#56b6c2">((</span>difference <span style="color:#bc74c4">%</span> <span style="color:#56b6c2">(</span><span style="color:#56b6c2">1000</span> <span style="color:#bc74c4">*</span> <span style="color:#56b6c2">60</span> <span style="color:#bc74c4">*</span> <span style="color:#56b6c2">60</span><span style="color:#56b6c2">))</span> <span style="color:#bc74c4">/</span> <span style="color:#56b6c2">(</span><span style="color:#56b6c2">1000</span> <span style="color:#bc74c4">*</span> <span style="color:#56b6c2">60</span><span style="color:#56b6c2">));</span>
+</span></span><span style="display:flex;"><span>    seconds <span style="color:#bc74c4">=</span> <span style="color:#7fbaf5">Math</span><span style="color:#56b6c2">.</span>floor<span style="color:#56b6c2">((</span>difference <span style="color:#bc74c4">%</span> <span style="color:#56b6c2">(</span><span style="color:#56b6c2">1000</span> <span style="color:#bc74c4">*</span> <span style="color:#56b6c2">60</span><span style="color:#56b6c2">))</span> <span style="color:#bc74c4">/</span> <span style="color:#56b6c2">1000</span><span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>    milliseconds <span style="color:#bc74c4">=</span> <span style="color:#7fbaf5">Math</span><span style="color:#56b6c2">.</span>floor<span style="color:#56b6c2">((</span>difference <span style="color:#bc74c4">%</span> <span style="color:#56b6c2">(</span><span style="color:#56b6c2">1000</span> <span style="color:#bc74c4">*</span> <span style="color:#56b6c2">60</span><span style="color:#56b6c2">))</span> <span style="color:#bc74c4">/</span> <span style="color:#56b6c2">100</span><span style="color:#56b6c2">);</span>hours <span style="color:#bc74c4">=</span> <span style="color:#56b6c2">(</span>hours <span style="color:#bc74c4">&lt;</span> <span style="color:#56b6c2">10</span><span style="color:#56b6c2">)</span> <span style="color:#bc74c4">?</span> <span style="color:#82cc6a">&#34;0&#34;</span> <span style="color:#bc74c4">+</span> hours <span style="color:#bc74c4">:</span> hours<span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>    minutes <span style="color:#bc74c4">=</span> <span style="color:#56b6c2">(</span>minutes <span style="color:#bc74c4">&lt;</span> <span style="color:#56b6c2">10</span><span style="color:#56b6c2">)</span> <span style="color:#bc74c4">?</span> <span style="color:#82cc6a">&#34;0&#34;</span> <span style="color:#bc74c4">+</span> minutes <span style="color:#bc74c4">:</span> minutes<span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>    seconds <span style="color:#bc74c4">=</span> <span style="color:#56b6c2">(</span>seconds <span style="color:#bc74c4">&lt;</span> <span style="color:#56b6c2">10</span><span style="color:#56b6c2">)</span> <span style="color:#bc74c4">?</span> <span style="color:#82cc6a">&#34;0&#34;</span> <span style="color:#bc74c4">+</span> seconds <span style="color:#bc74c4">:</span> seconds<span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>    milliseconds <span style="color:#bc74c4">=</span> <span style="color:#56b6c2">(</span>milliseconds <span style="color:#bc74c4">&lt;</span> <span style="color:#56b6c2">100</span><span style="color:#56b6c2">)</span> <span style="color:#bc74c4">?</span> <span style="color:#56b6c2">(</span>milliseconds <span style="color:#bc74c4">&lt;</span> <span style="color:#56b6c2">10</span><span style="color:#56b6c2">)</span> <span style="color:#bc74c4">?</span> <span style="color:#82cc6a">&#34;00&#34;</span> <span style="color:#bc74c4">+</span> milliseconds <span style="color:#bc74c4">:</span> <span style="color:#82cc6a">&#34;0&#34;</span> <span style="color:#bc74c4">+</span> milliseconds <span style="color:#bc74c4">:</span> milliseconds<span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>    elapsedTime <span style="color:#bc74c4">=</span> hours <span style="color:#bc74c4">+</span> <span style="color:#82cc6a">&#39;:&#39;</span> <span style="color:#bc74c4">+</span> minutes <span style="color:#bc74c4">+</span> <span style="color:#82cc6a">&#39;:&#39;</span> <span style="color:#bc74c4">+</span> seconds <span style="color:#bc74c4">+</span> <span style="color:#82cc6a">&#39;:&#39;</span> <span style="color:#bc74c4">+</span> milliseconds<span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>    timerDisplay<span style="color:#56b6c2">.</span>innerHTML <span style="color:#bc74c4">=</span> elapsedTime<span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#56b6c2">}</span>
+</span></span></code></pre></div><hr>
+<h1 id="storing-the-data">Storing The Data</h1>
+<hr>
+<p>The model for a user includes an array of timestamp objects. The timestamp object includes a title, an array of tags, the date of creation, and the elapsed time. Currently, I am storing elapsed time with seperate hour, minute, second, and millisecond parts. I&rsquo;m unsure how I will eventually want to use this data when I generate charts and analytics so this will likely change.</p>
 <p>When the user clicks the save icon, an XMLHTTPRequest is created and posts the JSON data to a route which saves the data in the database.</p>
 <p><em>time.js</em></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">send</span><span class="p">(){</span>
-</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">title</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;tags&#39;</span><span class="p">).</span><span class="nx">selectedOptions</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">tags</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="nx">options</span><span class="p">).</span><span class="nx">map</span><span class="p">(({</span><span class="nx">value</span><span class="p">})=&gt;</span> <span class="nx">value</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">dateOptions</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">month</span><span class="o">:</span> <span class="s2">&#34;short&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">day</span><span class="o">:</span> <span class="s2">&#34;2-digit&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">year</span><span class="o">:</span> <span class="s2">&#34;numeric&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">time</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">hours</span><span class="o">:</span> <span class="nx">hours</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">minutes</span><span class="o">:</span> <span class="nx">minutes</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">seconds</span><span class="o">:</span> <span class="nx">seconds</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">milliseconds</span><span class="o">:</span> <span class="nx">milliseconds</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">date</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">toLocaleDateString</span><span class="p">(</span><span class="s1">&#39;en-US&#39;</span><span class="p">,</span> <span class="nx">dateOptions</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">window</span><span class="p">.</span><span class="nx">XMLHttpRequest</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;POST&#39;</span><span class="p">,</span> <span class="s1">&#39;/time/stamp&#39;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="s1">&#39;content-type&#39;</span><span class="p">,</span> <span class="s1">&#39;application/json;charset=UTF-8&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span><span class="s2">&#34;title&#34;</span><span class="o">:</span> <span class="nx">title</span><span class="p">,</span> <span class="s2">&#34;tags&#34;</span><span class="o">:</span> <span class="nx">tags</span><span class="p">,</span> <span class="s2">&#34;date&#34;</span><span class="o">:</span> <span class="nx">date</span><span class="p">,</span> <span class="s2">&#34;elapsedTime&#34;</span><span class="o">:</span> <span class="nx">time</span><span class="p">}));</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#7fbaf5">function</span> send<span style="color:#56b6c2">(){</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">var</span> title <span style="color:#bc74c4">=</span> <span style="color:#7fbaf5">document</span><span style="color:#56b6c2">.</span>getElementById<span style="color:#56b6c2">(</span><span style="color:#82cc6a">&#39;title&#39;</span><span style="color:#56b6c2">).</span>value<span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">var</span> options <span style="color:#bc74c4">=</span> <span style="color:#7fbaf5">document</span><span style="color:#56b6c2">.</span>getElementById<span style="color:#56b6c2">(</span><span style="color:#82cc6a">&#39;tags&#39;</span><span style="color:#56b6c2">).</span>selectedOptions<span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">var</span> tags <span style="color:#bc74c4">=</span> <span style="color:#7fbaf5">Array</span><span style="color:#56b6c2">.</span>from<span style="color:#56b6c2">(</span>options<span style="color:#56b6c2">).</span>map<span style="color:#56b6c2">(({</span>value<span style="color:#56b6c2">})=&gt;</span> value<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">var</span> dateOptions <span style="color:#bc74c4">=</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>      month<span style="color:#bc74c4">:</span> <span style="color:#82cc6a">&#34;short&#34;</span><span style="color:#56b6c2">,</span>
+</span></span><span style="display:flex;"><span>      day<span style="color:#bc74c4">:</span> <span style="color:#82cc6a">&#34;2-digit&#34;</span><span style="color:#56b6c2">,</span>
+</span></span><span style="display:flex;"><span>      year<span style="color:#bc74c4">:</span> <span style="color:#82cc6a">&#34;numeric&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">var</span> time <span style="color:#bc74c4">=</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>      hours<span style="color:#bc74c4">:</span> hours<span style="color:#56b6c2">,</span>
+</span></span><span style="display:flex;"><span>      minutes<span style="color:#bc74c4">:</span> minutes<span style="color:#56b6c2">,</span>
+</span></span><span style="display:flex;"><span>      seconds<span style="color:#bc74c4">:</span> seconds<span style="color:#56b6c2">,</span>
+</span></span><span style="display:flex;"><span>      milliseconds<span style="color:#bc74c4">:</span> milliseconds
+</span></span><span style="display:flex;"><span>  <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">var</span> date <span style="color:#bc74c4">=</span> <span style="color:#7fbaf5">new</span> <span style="color:#7fbaf5">Date</span><span style="color:#56b6c2">().</span>toLocaleDateString<span style="color:#56b6c2">(</span><span style="color:#82cc6a">&#39;en-US&#39;</span><span style="color:#56b6c2">,</span> dateOptions<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">var</span> xhr <span style="color:#bc74c4">=</span> <span style="color:#7fbaf5">new</span> <span style="color:#7fbaf5">window</span><span style="color:#56b6c2">.</span>XMLHttpRequest<span style="color:#56b6c2">();</span>
+</span></span><span style="display:flex;"><span>  xhr<span style="color:#56b6c2">.</span>open<span style="color:#56b6c2">(</span><span style="color:#82cc6a">&#39;POST&#39;</span><span style="color:#56b6c2">,</span> <span style="color:#82cc6a">&#39;/time/stamp&#39;</span><span style="color:#56b6c2">,</span> <span style="color:#cf5967;background-color:#43454f">true</span><span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>  xhr<span style="color:#56b6c2">.</span>setRequestHeader<span style="color:#56b6c2">(</span><span style="color:#82cc6a">&#39;content-type&#39;</span><span style="color:#56b6c2">,</span> <span style="color:#82cc6a">&#39;application/json;charset=UTF-8&#39;</span><span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>  xhr<span style="color:#56b6c2">.</span>send<span style="color:#56b6c2">(</span>JSON<span style="color:#56b6c2">.</span>stringify<span style="color:#56b6c2">({</span><span style="color:#82cc6a">&#34;title&#34;</span><span style="color:#bc74c4">:</span> title<span style="color:#56b6c2">,</span> <span style="color:#82cc6a">&#34;tags&#34;</span><span style="color:#bc74c4">:</span> tags<span style="color:#56b6c2">,</span> <span style="color:#82cc6a">&#34;date&#34;</span><span style="color:#bc74c4">:</span> date<span style="color:#56b6c2">,</span> <span style="color:#82cc6a">&#34;elapsedTime&#34;</span><span style="color:#bc74c4">:</span> time<span style="color:#56b6c2">}));</span>
+</span></span><span style="display:flex;"><span><span style="color:#56b6c2">}</span>
 </span></span></code></pre></div><p><em>TimeController.js</em></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">stamp</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">{</span><span class="nx">title</span><span class="p">,</span> <span class="nx">tags</span><span class="p">,</span> <span class="nx">date</span><span class="p">,</span> <span class="nx">elapsedTime</span><span class="p">}</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">timestamp</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">title</span><span class="o">:</span> <span class="nx">title</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">tags</span><span class="o">:</span> <span class="nx">tags</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">date</span><span class="o">:</span> <span class="nx">date</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">elapsedTime</span><span class="o">:</span> <span class="nx">elapsedTime</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">user</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">User</span><span class="p">.</span><span class="nx">findById</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">user</span><span class="p">.</span><span class="nx">timestamps</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">timestamp</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">await</span> <span class="nx">user</span><span class="p">.</span><span class="nx">save</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span></code></pre></div></li>
-<li>
-<p><strong>Tags</strong><br>
-Tags are an important component of the project, I intend to add features like searching and filtering stored timestamps. I used a library <a href="https://www.npmjs.com/package/bootstrap5-tags">bootstrap5-tags</a> to easily enable a bootstrap compatible tags input field on the page.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#7fbaf5">const</span> stamp <span style="color:#bc74c4">=</span> <span style="color:#7fbaf5">async</span> <span style="color:#56b6c2">(</span>req<span style="color:#56b6c2">,</span> res<span style="color:#56b6c2">)</span> <span style="color:#56b6c2">=&gt;</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>  console<span style="color:#56b6c2">.</span>log<span style="color:#56b6c2">(</span>req<span style="color:#56b6c2">.</span>body<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">const</span> <span style="color:#56b6c2">{</span>title<span style="color:#56b6c2">,</span> tags<span style="color:#56b6c2">,</span> date<span style="color:#56b6c2">,</span> elapsedTime<span style="color:#56b6c2">}</span> <span style="color:#bc74c4">=</span> req<span style="color:#56b6c2">.</span>body<span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">let</span> timestamp <span style="color:#bc74c4">=</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>      title<span style="color:#bc74c4">:</span> title<span style="color:#56b6c2">,</span>
+</span></span><span style="display:flex;"><span>      tags<span style="color:#bc74c4">:</span> tags<span style="color:#56b6c2">,</span>
+</span></span><span style="display:flex;"><span>      date<span style="color:#bc74c4">:</span> date<span style="color:#56b6c2">,</span>
+</span></span><span style="display:flex;"><span>      elapsedTime<span style="color:#bc74c4">:</span> elapsedTime
+</span></span><span style="display:flex;"><span>  <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">let</span> user <span style="color:#bc74c4">=</span> <span style="color:#7fbaf5">await</span> User<span style="color:#56b6c2">.</span>findById<span style="color:#56b6c2">(</span>req<span style="color:#56b6c2">.</span>user<span style="color:#56b6c2">.</span>id<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>  user<span style="color:#56b6c2">.</span>timestamps<span style="color:#56b6c2">.</span>push<span style="color:#56b6c2">(</span>timestamp<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">await</span> user<span style="color:#56b6c2">.</span>save<span style="color:#56b6c2">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#56b6c2">};</span>
+</span></span></code></pre></div><hr>
+<h1 id="tags">Tags</h1>
+<hr>
+<p>Tags are an important component of the project, I intend to add features like searching and filtering stored timestamps. I used a library <a href="https://www.npmjs.com/package/bootstrap5-tags">bootstrap5-tags</a> to easily enable a bootstrap compatible tags input field on the page.</p>
 <p>Using EJS, I populate the available select options, and on post, I grab that selected tags to store in the database.</p>
 <p>Here&rsquo;s a look at the tags in action:</p>
 <img src="/images/posts/timetracker-tags.PNG">
-</li>
+<ul>
 <li>
 <p><strong>Responsive Design</strong><br>
 While I didn&rsquo;t want to spend very much energy on the design, I did want to create something that looks good and meets the basic requirements for a responsive and modern website.</p>
 <p>I used a combination of Bootstrap 5.3, EJS, and CSS. I only used two @media rules: one for Desktop screens, and the other for mobile (including landscape).</p>
 </li>
 </ul>
-<h2 id="whats-next">What&rsquo;s Next</h2>
+<hr>
+<h1 id="whats-next">What&rsquo;s Next</h1>
+<hr>
 <ul>
 <li>Enable searching and filtering when viewing previous timestamps</li>
 <li>Create a data/analytics page to display insights into the user&rsquo;s timestamps.</li>

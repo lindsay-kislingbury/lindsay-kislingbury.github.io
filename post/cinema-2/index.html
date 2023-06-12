@@ -28,8 +28,8 @@
     
     <link
       rel="stylesheet"
-      href="/scss/main.min.8b2a2113146a9351b3ae257c5b559c0dd17d701d16bec255669126bdbcc1bdd4.css"
-      integrity="sha256-iyohExRqk1GzriV8W1WcDdF9cB0WvsJVZpEmvbzBvdQ="
+      href="/scss/main.min.fcabebb43699aeef0a20af735764e68b5e1b2e8879df0d56bb93da5321b1ca86.css"
+      integrity="sha256-/KvrtDaZru8KIK9zV2Tmi14bLoh53w1Wu5PaUyGxyoY="
       crossorigin="anonymous"
       type="text/css"
     />
@@ -402,10 +402,6 @@
     "
   >
     
-      <div class="post__thumbnail-wrapper">
-        <img class="post__thumbnail" src="/images/posts/expressnode.png" alt="Thumbnail image" />
-      </div>
-    
     <div class="post__content">
       <h1>Cinema: So Many AHA! Moments</h1>
       
@@ -427,13 +423,17 @@
           </li>
         </ul>
       <p>The team decided to implement a larger data set that includes more information that they can display on the results page.</p>
-<h2 id="goals">Goals</h2>
+<hr>
+<h1 id="goals">Goals</h1>
+<hr>
 <ul>
 <li>Switch to a data set with more information that can be displayed on our results page.</li>
 <li>Pre-load movie data on the search page, so that checkboxes can be dynamically assigned with keywords present in the data set.</li>
 <li>Get search terms from the index page, send those search terms along with the matching movies to the results page.</li>
 </ul>
-<h2 id="express-basics">Express Basics</h2>
+<hr>
+<h1 id="express-basics">Express Basics</h1>
+<hr>
 <p>As issues started arise for the front-end team when they needed to access the style sheet on the index page, I realized that I needed to go back and learn some Express fundamentals.</p>
 <h4 id="defining-routes-and-sending-data">Defining Routes and Sending Data:</h4>
 <ul>
@@ -442,75 +442,75 @@
 </li>
 <li>
 <p>On a GET request to the home page, I use a callback to parse the local csv data, send that data to a javascript function to make modifications, and render the home page with search terms so that genre checkboxes can be created dynamically.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl">  <span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">parsedData</span> <span class="o">=</span> <span class="p">[];</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">//Using csv-parser to parse csv data to array of objects
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="nx">csvFilePath</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">csvParser</span><span class="p">())</span>
-</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">parsedData</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">})</span>
-</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&#34;end&#34;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="c1">//Extract genres from movie data
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="kd">let</span> <span class="nx">genres</span> <span class="o">=</span> <span class="nx">modify</span><span class="p">.</span><span class="nx">genreData</span><span class="p">(</span><span class="nx">parsedData</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">      <span class="c1">//Render index page, send genres to the page
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">genres</span> <span class="p">})</span> 
-</span></span><span class="line"><span class="cl">    <span class="p">})</span>
-</span></span><span class="line"><span class="cl">  <span class="p">})</span>
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>  app<span style="color:#56b6c2">.</span>get<span style="color:#56b6c2">(</span><span style="color:#82cc6a">&#39;/&#39;</span><span style="color:#56b6c2">,</span> <span style="color:#56b6c2">(</span>req<span style="color:#56b6c2">,</span> res<span style="color:#56b6c2">)</span> <span style="color:#56b6c2">=&gt;</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">var</span> parsedData <span style="color:#bc74c4">=</span> <span style="color:#56b6c2">[];</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#3e4460">//Using csv-parser to parse csv data to array of objects
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>  fs<span style="color:#56b6c2">.</span>createReadStream<span style="color:#56b6c2">(</span>csvFilePath<span style="color:#56b6c2">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#56b6c2">.</span>pipe<span style="color:#56b6c2">(</span>csvParser<span style="color:#56b6c2">())</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#56b6c2">.</span>on<span style="color:#56b6c2">(</span><span style="color:#82cc6a">&#39;data&#39;</span><span style="color:#56b6c2">,</span> <span style="color:#56b6c2">(</span>data<span style="color:#56b6c2">)</span> <span style="color:#56b6c2">=&gt;</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>      parsedData<span style="color:#56b6c2">.</span>push<span style="color:#56b6c2">(</span>data<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#56b6c2">})</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#56b6c2">.</span>on<span style="color:#56b6c2">(</span><span style="color:#82cc6a">&#34;end&#34;</span><span style="color:#56b6c2">,</span> <span style="color:#56b6c2">()</span> <span style="color:#56b6c2">=&gt;</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#3e4460">//Extract genres from movie data
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>      <span style="color:#7fbaf5">let</span> genres <span style="color:#bc74c4">=</span> modify<span style="color:#56b6c2">.</span>genreData<span style="color:#56b6c2">(</span>parsedData<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#3e4460">//Render index page, send genres to the page
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>      res<span style="color:#56b6c2">.</span>render<span style="color:#56b6c2">(</span><span style="color:#82cc6a">&#39;index&#39;</span><span style="color:#56b6c2">,</span> <span style="color:#56b6c2">{</span> genres <span style="color:#56b6c2">})</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#56b6c2">})</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#56b6c2">})</span>
 </span></span></code></pre></div></li>
 <li>
 <p>On a POST request to the results page, I had to parse the csv data again because I couldn&rsquo;t find a way to save the already parsed and modified data from the previous route. I know that there is likely a better way to do this, but because our project was already at the midway point, I wanted to keep moving forward.</p>
 </li>
 <li>
 <p>After parsing the data, I pass it to a javascript function that searches for matching movies. The results page is then rendered with result data</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl">  <span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/search&#39;</span><span class="p">,</span> <span class="nx">upload</span><span class="p">.</span><span class="nx">none</span><span class="p">(),</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">req</span><span class="p">.</span><span class="nx">header</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span> <span class="s1">&#39;application/json&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nx">query</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">parsedData</span> <span class="o">=</span> <span class="p">[];</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">//Using csv-parser to parse csv data to array of objects
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="nx">csvFilePath</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">      <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">csvParser</span><span class="p">())</span>
-</span></span><span class="line"><span class="cl">      <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">parsedData</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">      <span class="p">})</span>
-</span></span><span class="line"><span class="cl">      <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&#34;end&#34;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">//Modify data to a more useable format, remove un-needed data
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">modify</span><span class="p">.</span><span class="nx">movieData</span><span class="p">(</span><span class="nx">parsedData</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">//Perform search 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kd">let</span> <span class="nx">searchResults</span> <span class="o">=</span> <span class="nx">search</span><span class="p">.</span><span class="nx">matches</span><span class="p">(</span><span class="nx">query</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">//Render Results page, send search results to the page
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">&#39;results&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">searchResults</span> <span class="p">})</span>
-</span></span><span class="line"><span class="cl">      <span class="p">})</span>
-</span></span><span class="line"><span class="cl">    <span class="p">})</span>
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>  app<span style="color:#56b6c2">.</span>post<span style="color:#56b6c2">(</span><span style="color:#82cc6a">&#39;/search&#39;</span><span style="color:#56b6c2">,</span> upload<span style="color:#56b6c2">.</span>none<span style="color:#56b6c2">(),</span> <span style="color:#7fbaf5">function</span><span style="color:#56b6c2">(</span>req<span style="color:#56b6c2">,</span> res<span style="color:#56b6c2">)</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>    req<span style="color:#56b6c2">.</span>header<span style="color:#56b6c2">(</span><span style="color:#82cc6a">&#39;Content-Type&#39;</span><span style="color:#56b6c2">,</span> <span style="color:#82cc6a">&#39;application/json&#39;</span><span style="color:#56b6c2">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7fbaf5">let</span> query <span style="color:#bc74c4">=</span> req<span style="color:#56b6c2">.</span>body<span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7fbaf5">var</span> parsedData <span style="color:#bc74c4">=</span> <span style="color:#56b6c2">[];</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#3e4460">//Using csv-parser to parse csv data to array of objects
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>    fs<span style="color:#56b6c2">.</span>createReadStream<span style="color:#56b6c2">(</span>csvFilePath<span style="color:#56b6c2">)</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#56b6c2">.</span>pipe<span style="color:#56b6c2">(</span>csvParser<span style="color:#56b6c2">())</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#56b6c2">.</span>on<span style="color:#56b6c2">(</span><span style="color:#82cc6a">&#39;data&#39;</span><span style="color:#56b6c2">,</span> <span style="color:#56b6c2">(</span>data<span style="color:#56b6c2">)</span> <span style="color:#56b6c2">=&gt;</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>        parsedData<span style="color:#56b6c2">.</span>push<span style="color:#56b6c2">(</span>data<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#56b6c2">})</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#56b6c2">.</span>on<span style="color:#56b6c2">(</span><span style="color:#82cc6a">&#34;end&#34;</span><span style="color:#56b6c2">,</span> <span style="color:#56b6c2">()</span> <span style="color:#56b6c2">=&gt;</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#3e4460">//Modify data to a more useable format, remove un-needed data
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>        <span style="color:#7fbaf5">let</span> data <span style="color:#bc74c4">=</span> modify<span style="color:#56b6c2">.</span>movieData<span style="color:#56b6c2">(</span>parsedData<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#3e4460">//Perform search 
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>        <span style="color:#7fbaf5">let</span> searchResults <span style="color:#bc74c4">=</span> search<span style="color:#56b6c2">.</span>matches<span style="color:#56b6c2">(</span>query<span style="color:#56b6c2">,</span> data<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#3e4460">//Render Results page, send search results to the page
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>        res<span style="color:#56b6c2">.</span>render<span style="color:#56b6c2">(</span><span style="color:#82cc6a">&#39;results&#39;</span><span style="color:#56b6c2">,</span> <span style="color:#56b6c2">{</span> searchResults <span style="color:#56b6c2">})</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#56b6c2">})</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#56b6c2">})</span>
 </span></span></code></pre></div></li>
 </ul>
 <h4 id="file-structure-and-serving-static-files">File Structure and Serving Static Files:</h4>
 <ul>
 <li>
 <p>After the front end team ran into some issues access stylesheets, I cleaned up the file structure to align with Express Documentation:</p>
- <pre>
-     >movieData
-       - movies.csv
-     >public/css
-       - styles.css
-     >services
-       - modify.js
-       - search.js
-     >uploads
-     >views
-       - index.ejs
-       - results.ejs
-     - server.js
- </pre>   
-</li>
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>    &gt;movieData
+</span></span><span style="display:flex;"><span>      - movies.csv
+</span></span><span style="display:flex;"><span>    &gt;public/css
+</span></span><span style="display:flex;"><span>      - styles.css
+</span></span><span style="display:flex;"><span>    &gt;services
+</span></span><span style="display:flex;"><span>      - modify.js
+</span></span><span style="display:flex;"><span>      - search.js
+</span></span><span style="display:flex;"><span>    &gt;uploads
+</span></span><span style="display:flex;"><span>    &gt;views
+</span></span><span style="display:flex;"><span>      - index.ejs
+</span></span><span style="display:flex;"><span>      - results.ejs
+</span></span><span style="display:flex;"><span>    - server.js
+</span></span></code></pre></div></li>
 <li>
 <p>Express Documentation also helped with the correct way to access static files by defining a public directory:</p>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl">  <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="kr">static</span><span class="p">(</span><span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">&#39;public&#39;</span><span class="p">)));</span>
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>  app<span style="color:#56b6c2">.</span>use<span style="color:#56b6c2">(</span>express<span style="color:#56b6c2">.</span><span style="color:#7fbaf5">static</span><span style="color:#56b6c2">(</span>path<span style="color:#56b6c2">.</span>join<span style="color:#56b6c2">(</span>__dirname<span style="color:#56b6c2">,</span> <span style="color:#82cc6a">&#39;public&#39;</span><span style="color:#56b6c2">)));</span>
 </span></span></code></pre></div><p>After creating a route to the public directory, stylesheets are accessed like this:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl">  <span class="o">&lt;</span><span class="nx">link</span> <span class="nx">rel</span><span class="o">=</span><span class="s2">&#34;stylesheet&#34;</span> <span class="nx">type</span> <span class="o">=</span> <span class="s2">&#34;text/css&#34;</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&#34;css/styles.css&#34;</span><span class="o">&gt;</span>
-</span></span></code></pre></div><h2 id="more-data">More Data!</h2>
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>  <span style="color:#bc74c4">&lt;</span>link rel<span style="color:#bc74c4">=</span><span style="color:#82cc6a">&#34;stylesheet&#34;</span> type <span style="color:#bc74c4">=</span> <span style="color:#82cc6a">&#34;text/css&#34;</span> href<span style="color:#bc74c4">=</span><span style="color:#82cc6a">&#34;css/styles.css&#34;</span><span style="color:#bc74c4">&gt;</span>
+</span></span></code></pre></div><hr>
+<h1 id="more-data">More Data!</h1>
+<hr>
 <ul>
 <li>
 <p>After creating a functional Node app and feeling more comfortable with Express, I began to implement a larger data set. I chose another csv file that included title, genres, keywords, year released, tagline and description for each movie.</p>
@@ -524,31 +524,33 @@
 </li>
 <li>
 <p>For the index page, I didn&rsquo;t need to send <strong>ALL</strong> of that data, just a list of genres present in the database, here is the javascript to return all genres:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl">    <span class="c1">//Return all genres present in the dataset
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kd">function</span> <span class="nx">genreData</span><span class="p">(</span><span class="nx">movies</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">      <span class="kd">let</span> <span class="nx">modifiedMovies</span> <span class="o">=</span> <span class="nx">movieData</span><span class="p">(</span><span class="nx">movies</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">genreArr</span> <span class="o">=</span> <span class="p">[];</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">modifiedMovies</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">movie</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">          <span class="nx">movie</span><span class="p">.</span><span class="nx">genres</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">genre</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">              <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">genreArr</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">genre</span><span class="p">))</span> <span class="nx">genreArr</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">genre</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">          <span class="p">});</span>
-</span></span><span class="line"><span class="cl">      <span class="p">});</span>
-</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">genreArr</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>    <span style="color:#3e4460">//Return all genres present in the dataset
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>  <span style="color:#7fbaf5">function</span> genreData<span style="color:#56b6c2">(</span>movies<span style="color:#56b6c2">){</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#7fbaf5">let</span> modifiedMovies <span style="color:#bc74c4">=</span> movieData<span style="color:#56b6c2">(</span>movies<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>      genreArr <span style="color:#bc74c4">=</span> <span style="color:#56b6c2">[];</span>
+</span></span><span style="display:flex;"><span>      modifiedMovies<span style="color:#56b6c2">.</span>forEach<span style="color:#56b6c2">(</span>movie <span style="color:#56b6c2">=&gt;</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>          movie<span style="color:#56b6c2">.</span>genres<span style="color:#56b6c2">.</span>forEach<span style="color:#56b6c2">(</span>genre <span style="color:#56b6c2">=&gt;</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span><span style="color:#bc74c4">!</span>genreArr<span style="color:#56b6c2">.</span>includes<span style="color:#56b6c2">(</span>genre<span style="color:#56b6c2">))</span> genreArr<span style="color:#56b6c2">.</span>push<span style="color:#56b6c2">(</span>genre<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#56b6c2">});</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#56b6c2">});</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#7fbaf5">return</span> genreArr<span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#56b6c2">}</span>
 </span></span></code></pre></div></li>
 </ul>
-<h2 id="searching-for-movies">Searching For Movies</h2>
+<hr>
+<h1 id="searching-for-movies">Searching For Movies</h1>
+<hr>
 <ul>
 <li>First, I created a modified array of movie data that includes only the data I need for searching:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nx">movieSearchList</span> <span class="o">=</span> <span class="p">[];</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">movieData</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">movie</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">movieSearchList</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
-</span></span><span class="line"><span class="cl">            <span class="nx">movieId</span><span class="o">:</span> <span class="nx">movie</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="nx">keywords</span><span class="o">:</span> <span class="nx">movie</span><span class="p">.</span><span class="nx">keywords</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="nx">genres</span><span class="o">:</span> <span class="nx">movie</span><span class="p">.</span><span class="nx">genres</span>
-</span></span><span class="line"><span class="cl">        <span class="p">})</span>
-</span></span><span class="line"><span class="cl">    <span class="p">});</span> 
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>    <span style="color:#7fbaf5">let</span> movieSearchList <span style="color:#bc74c4">=</span> <span style="color:#56b6c2">[];</span>
+</span></span><span style="display:flex;"><span>    movieData<span style="color:#56b6c2">.</span>forEach<span style="color:#56b6c2">(</span>movie <span style="color:#56b6c2">=&gt;</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>        movieSearchList<span style="color:#56b6c2">.</span>push<span style="color:#56b6c2">({</span>
+</span></span><span style="display:flex;"><span>            movieId<span style="color:#bc74c4">:</span> movie<span style="color:#56b6c2">.</span>id<span style="color:#56b6c2">,</span>
+</span></span><span style="display:flex;"><span>            keywords<span style="color:#bc74c4">:</span> movie<span style="color:#56b6c2">.</span>keywords<span style="color:#56b6c2">,</span>
+</span></span><span style="display:flex;"><span>            genres<span style="color:#bc74c4">:</span> movie<span style="color:#56b6c2">.</span>genres
+</span></span><span style="display:flex;"><span>        <span style="color:#56b6c2">})</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#56b6c2">});</span> 
 </span></span></code></pre></div><ul>
 <li>
 <p>Because the list of keywords present in the entire dataset was fairly large, I wouldn&rsquo;t be able to display all available keywords on the search page to choose from. <br>
@@ -559,123 +561,125 @@ The solution we landed on  was to allow the user to type in a keyword or two, an
 </li>
 <li>
 <p>I ended up using a library called <a href="https://fusejs.io/">Fuse.js</a>. The library is lightweight, has no dependencies, and allows you to set a few options like case sensitivity and the ability to sort by match score.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">Fuse</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fuse.js&#39;</span><span class="p">);</span> 
-</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span> <span class="c1">//Fuse options
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">includeScore</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">isCaseSensitive</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">includeMatches</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">shouldSort</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">findAllMatches</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">threshold</span><span class="o">:</span> <span class="mf">0.3</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">keys</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;keywords&#39;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>  <span style="color:#7fbaf5">const</span> Fuse <span style="color:#bc74c4">=</span> require<span style="color:#56b6c2">(</span><span style="color:#82cc6a">&#39;fuse.js&#39;</span><span style="color:#56b6c2">);</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">var</span> options <span style="color:#bc74c4">=</span> <span style="color:#56b6c2">{</span> <span style="color:#3e4460">//Fuse options
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>      includeScore<span style="color:#bc74c4">:</span> <span style="color:#cf5967;background-color:#43454f">false</span><span style="color:#56b6c2">,</span>
+</span></span><span style="display:flex;"><span>      isCaseSensitive<span style="color:#bc74c4">:</span> <span style="color:#cf5967;background-color:#43454f">false</span><span style="color:#56b6c2">,</span>
+</span></span><span style="display:flex;"><span>      includeMatches<span style="color:#bc74c4">:</span> <span style="color:#cf5967;background-color:#43454f">false</span><span style="color:#56b6c2">,</span>
+</span></span><span style="display:flex;"><span>      shouldSort<span style="color:#bc74c4">:</span> <span style="color:#cf5967;background-color:#43454f">true</span><span style="color:#56b6c2">,</span>
+</span></span><span style="display:flex;"><span>      findAllMatches<span style="color:#bc74c4">:</span> <span style="color:#cf5967;background-color:#43454f">true</span><span style="color:#56b6c2">,</span>
+</span></span><span style="display:flex;"><span>      threshold<span style="color:#bc74c4">:</span> <span style="color:#56b6c2">0.3</span><span style="color:#56b6c2">,</span>
+</span></span><span style="display:flex;"><span>      keys<span style="color:#bc74c4">:</span> <span style="color:#56b6c2">[</span><span style="color:#82cc6a">&#39;keywords&#39;</span><span style="color:#56b6c2">],</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#56b6c2">}</span>
 </span></span></code></pre></div></li>
 </ul>
 <h2 id="how-the-search-works">How the search works</h2>
 <p><strong>1.</strong> Use Fuse.js to find all movie id&rsquo;s for movies matching the keywords input by the user</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl">  <span class="c1">//Keyword Search. Store matching movieIds in array
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kd">let</span> <span class="nx">fuse</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Fuse</span><span class="p">(</span><span class="nx">movieSearchList</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">keywordMatches</span> <span class="o">=</span> <span class="p">[];</span>
-</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">keywordMatchFound</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="k">if</span><span class="p">(</span><span class="nx">searchKeywords</span><span class="p">){</span><span class="c1">//Find keyword matches using fuse.js
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="k">if</span><span class="p">(</span><span class="nx">searchKeywords</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">          <span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">fuse</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="nx">searchKeywords</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">          <span class="k">if</span><span class="p">(</span><span class="nx">result</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">              <span class="nx">result</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">result</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                  <span class="nx">keywordMatches</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">item</span><span class="p">.</span><span class="nx">movieId</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">              <span class="p">})</span>
-</span></span><span class="line"><span class="cl">          <span class="p">}</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">      <span class="k">if</span><span class="p">(</span><span class="nx">keywordMatches</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">          <span class="nx">keywordMatchFound</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">          <span class="nx">keywordMatchFound</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>  <span style="color:#3e4460">//Keyword Search. Store matching movieIds in array
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>  <span style="color:#7fbaf5">let</span> fuse <span style="color:#bc74c4">=</span> <span style="color:#7fbaf5">new</span> Fuse<span style="color:#56b6c2">(</span>movieSearchList<span style="color:#56b6c2">,</span> options<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">let</span> keywordMatches <span style="color:#bc74c4">=</span> <span style="color:#56b6c2">[];</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">var</span> keywordMatchFound <span style="color:#bc74c4">=</span> <span style="color:#cf5967;background-color:#43454f">false</span><span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>searchKeywords<span style="color:#56b6c2">){</span><span style="color:#3e4460">//Find keyword matches using fuse.js
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>      <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>searchKeywords<span style="color:#56b6c2">){</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#7fbaf5">let</span> result <span style="color:#bc74c4">=</span> fuse<span style="color:#56b6c2">.</span>search<span style="color:#56b6c2">(</span>searchKeywords<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>result<span style="color:#56b6c2">){</span>
+</span></span><span style="display:flex;"><span>              result<span style="color:#56b6c2">.</span>forEach<span style="color:#56b6c2">(</span>result <span style="color:#56b6c2">=&gt;</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>                  keywordMatches<span style="color:#56b6c2">.</span>push<span style="color:#56b6c2">(</span>result<span style="color:#56b6c2">.</span>item<span style="color:#56b6c2">.</span>movieId<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#56b6c2">})</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>keywordMatches<span style="color:#56b6c2">.</span>length <span style="color:#bc74c4">&gt;</span> <span style="color:#56b6c2">0</span><span style="color:#56b6c2">){</span>
+</span></span><span style="display:flex;"><span>          keywordMatchFound <span style="color:#bc74c4">=</span> <span style="color:#cf5967;background-color:#43454f">true</span><span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#56b6c2">}</span> <span style="color:#7fbaf5">else</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>          keywordMatchFound <span style="color:#bc74c4">=</span> <span style="color:#cf5967;background-color:#43454f">false</span><span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#56b6c2">}</span>
 </span></span></code></pre></div><p><strong>2.</strong> Find all movie id&rsquo;s for movies matching genres input by the user. This is an exact match to the genre name associate with a checkbox on the search page</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl">  <span class="c1">//Keyword Search. Store matching movieIds in array
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kd">let</span> <span class="nx">fuse</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Fuse</span><span class="p">(</span><span class="nx">movieSearchList</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">keywordMatches</span> <span class="o">=</span> <span class="p">[];</span>
-</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">keywordMatchFound</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="k">if</span><span class="p">(</span><span class="nx">searchKeywords</span><span class="p">){</span><span class="c1">//Find keyword matches using fuse.js
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="k">if</span><span class="p">(</span><span class="nx">searchKeywords</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">          <span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">fuse</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="nx">searchKeywords</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">          <span class="k">if</span><span class="p">(</span><span class="nx">result</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">              <span class="nx">result</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">result</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                  <span class="nx">keywordMatches</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">item</span><span class="p">.</span><span class="nx">movieId</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">              <span class="p">})</span>
-</span></span><span class="line"><span class="cl">          <span class="p">}</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">      <span class="k">if</span><span class="p">(</span><span class="nx">keywordMatches</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">          <span class="nx">keywordMatchFound</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">          <span class="nx">keywordMatchFound</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>  <span style="color:#3e4460">//Keyword Search. Store matching movieIds in array
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>  <span style="color:#7fbaf5">let</span> fuse <span style="color:#bc74c4">=</span> <span style="color:#7fbaf5">new</span> Fuse<span style="color:#56b6c2">(</span>movieSearchList<span style="color:#56b6c2">,</span> options<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">let</span> keywordMatches <span style="color:#bc74c4">=</span> <span style="color:#56b6c2">[];</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">var</span> keywordMatchFound <span style="color:#bc74c4">=</span> <span style="color:#cf5967;background-color:#43454f">false</span><span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>searchKeywords<span style="color:#56b6c2">){</span><span style="color:#3e4460">//Find keyword matches using fuse.js
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>      <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>searchKeywords<span style="color:#56b6c2">){</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#7fbaf5">let</span> result <span style="color:#bc74c4">=</span> fuse<span style="color:#56b6c2">.</span>search<span style="color:#56b6c2">(</span>searchKeywords<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>result<span style="color:#56b6c2">){</span>
+</span></span><span style="display:flex;"><span>              result<span style="color:#56b6c2">.</span>forEach<span style="color:#56b6c2">(</span>result <span style="color:#56b6c2">=&gt;</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>                  keywordMatches<span style="color:#56b6c2">.</span>push<span style="color:#56b6c2">(</span>result<span style="color:#56b6c2">.</span>item<span style="color:#56b6c2">.</span>movieId<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#56b6c2">})</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>keywordMatches<span style="color:#56b6c2">.</span>length <span style="color:#bc74c4">&gt;</span> <span style="color:#56b6c2">0</span><span style="color:#56b6c2">){</span>
+</span></span><span style="display:flex;"><span>          keywordMatchFound <span style="color:#bc74c4">=</span> <span style="color:#cf5967;background-color:#43454f">true</span><span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#56b6c2">}</span> <span style="color:#7fbaf5">else</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>          keywordMatchFound <span style="color:#bc74c4">=</span> <span style="color:#cf5967;background-color:#43454f">false</span><span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#56b6c2">}</span>
 </span></span></code></pre></div><p><strong>3.</strong> Create an array of movie ids that match <strong>BOTH</strong> genre and keyword - excluding duplicates</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">bestMatches</span> <span class="o">=</span> <span class="p">[];</span>
-</span></span><span class="line"><span class="cl">  <span class="k">if</span><span class="p">(</span><span class="nx">keywordMatches</span><span class="p">.</span><span class="nx">length</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">){</span> 
-</span></span><span class="line"><span class="cl">      <span class="k">for</span><span class="p">(</span><span class="kr">const</span> <span class="nx">genre</span> <span class="k">of</span> <span class="nx">genreMatches</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">          <span class="k">if</span><span class="p">(</span><span class="nx">keywordMatches</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">genre</span><span class="p">)){</span>
-</span></span><span class="line"><span class="cl">              <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">bestMatches</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">genre</span><span class="p">)){</span>
-</span></span><span class="line"><span class="cl">                  <span class="nx">bestMatches</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">genre</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">              <span class="p">}</span>
-</span></span><span class="line"><span class="cl">          <span class="p">}</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">      <span class="k">for</span><span class="p">(</span><span class="kr">const</span> <span class="nx">keyword</span> <span class="k">of</span> <span class="nx">keywordMatches</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">          <span class="k">if</span><span class="p">(</span><span class="nx">genreMatches</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">keyword</span><span class="p">)){</span>
-</span></span><span class="line"><span class="cl">              <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">bestMatches</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">keyword</span><span class="p">)){</span>
-</span></span><span class="line"><span class="cl">                  <span class="nx">bestMatches</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">keyword</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">              <span class="p">}</span>
-</span></span><span class="line"><span class="cl">          <span class="p">}</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="k">else</span><span class="p">{</span> 
-</span></span><span class="line"><span class="cl">      <span class="k">for</span><span class="p">(</span><span class="kr">const</span> <span class="nx">keyword</span> <span class="k">of</span> <span class="nx">genreMatches</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">          <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">bestMatches</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">keyword</span><span class="p">)){</span>
-</span></span><span class="line"><span class="cl">              <span class="nx">bestMatches</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">keyword</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">          <span class="p">}</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>  <span style="color:#7fbaf5">let</span> bestMatches <span style="color:#bc74c4">=</span> <span style="color:#56b6c2">[];</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>keywordMatches<span style="color:#56b6c2">.</span>length<span style="color:#bc74c4">&gt;</span><span style="color:#56b6c2">0</span><span style="color:#56b6c2">){</span> 
+</span></span><span style="display:flex;"><span>      <span style="color:#7fbaf5">for</span><span style="color:#56b6c2">(</span><span style="color:#7fbaf5">const</span> genre <span style="color:#7fbaf5">of</span> genreMatches<span style="color:#56b6c2">){</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>keywordMatches<span style="color:#56b6c2">.</span>includes<span style="color:#56b6c2">(</span>genre<span style="color:#56b6c2">)){</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span><span style="color:#bc74c4">!</span>bestMatches<span style="color:#56b6c2">.</span>includes<span style="color:#56b6c2">(</span>genre<span style="color:#56b6c2">)){</span>
+</span></span><span style="display:flex;"><span>                  bestMatches<span style="color:#56b6c2">.</span>push<span style="color:#56b6c2">(</span>genre<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#7fbaf5">for</span><span style="color:#56b6c2">(</span><span style="color:#7fbaf5">const</span> keyword <span style="color:#7fbaf5">of</span> keywordMatches<span style="color:#56b6c2">){</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>genreMatches<span style="color:#56b6c2">.</span>includes<span style="color:#56b6c2">(</span>keyword<span style="color:#56b6c2">)){</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span><span style="color:#bc74c4">!</span>bestMatches<span style="color:#56b6c2">.</span>includes<span style="color:#56b6c2">(</span>keyword<span style="color:#56b6c2">)){</span>
+</span></span><span style="display:flex;"><span>                  bestMatches<span style="color:#56b6c2">.</span>push<span style="color:#56b6c2">(</span>keyword<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">else</span><span style="color:#56b6c2">{</span> 
+</span></span><span style="display:flex;"><span>      <span style="color:#7fbaf5">for</span><span style="color:#56b6c2">(</span><span style="color:#7fbaf5">const</span> keyword <span style="color:#7fbaf5">of</span> genreMatches<span style="color:#56b6c2">){</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span><span style="color:#bc74c4">!</span>bestMatches<span style="color:#56b6c2">.</span>includes<span style="color:#56b6c2">(</span>keyword<span style="color:#56b6c2">)){</span>
+</span></span><span style="display:flex;"><span>              bestMatches<span style="color:#56b6c2">.</span>push<span style="color:#56b6c2">(</span>keyword<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#56b6c2">}</span>
 </span></span></code></pre></div><p><strong>4.</strong> Create an array of all matching movie objects</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl">    <span class="c1">//Set match found 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span><span class="p">(</span><span class="nx">genreMatchFound</span> <span class="o">||</span> <span class="nx">keywordMatchFound</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">matchFound</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span> 
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c1">//Filter movie objects into new arrays of matching movies
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">var</span> <span class="nx">bestMatchMovies</span> <span class="o">=</span> <span class="p">[];</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="nx">keywordMatchFound</span> <span class="o">&amp;&amp;</span> <span class="nx">genreMatchFound</span><span class="p">){</span> <span class="c1">//movies matching genre &amp;&amp; keyword
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">bestMatchMovies</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">movieData</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">movie</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span><span class="p">(</span><span class="nx">keywordMatches</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">movie</span><span class="p">.</span><span class="nx">id</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">genreMatches</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">movie</span><span class="p">.</span><span class="nx">id</span><span class="p">)){</span>
-</span></span><span class="line"><span class="cl">                <span class="kd">let</span> <span class="nx">tempMovie</span> <span class="o">=</span> <span class="nx">movie</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">                <span class="nx">tempMovie</span><span class="p">.</span><span class="nx">genreMatch</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">                <span class="nx">tempMovie</span><span class="p">.</span><span class="nx">keywordMatch</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="nx">tempMovie</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">}</span> 
-</span></span><span class="line"><span class="cl">        <span class="p">}))</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">genreMatchFound</span><span class="p">){</span><span class="c1">//movies matching only genre
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">bestMatchMovies</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">movieData</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">movie</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span><span class="p">(</span><span class="nx">genreMatches</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">movie</span><span class="p">.</span><span class="nx">id</span><span class="p">)){</span>
-</span></span><span class="line"><span class="cl">                <span class="kd">let</span> <span class="nx">tempMovie</span> <span class="o">=</span> <span class="nx">movie</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">                <span class="nx">tempMovie</span><span class="p">.</span><span class="nx">genreMatch</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="nx">tempMovie</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">}</span> 
-</span></span><span class="line"><span class="cl">        <span class="p">}))</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">keywordMatchFound</span><span class="p">)</span> <span class="p">{</span><span class="c1">//movies matching only keyword
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">bestMatchMovies</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">movieData</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">movie</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span><span class="p">(</span><span class="nx">keywordMatches</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">movie</span><span class="p">.</span><span class="nx">id</span><span class="p">)){</span>
-</span></span><span class="line"><span class="cl">                <span class="kd">let</span> <span class="nx">tempMovie</span> <span class="o">=</span> <span class="nx">movie</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">                <span class="nx">tempMovie</span><span class="p">.</span><span class="nx">keywordMatch</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="nx">tempMovie</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">}</span> 
-</span></span><span class="line"><span class="cl">        <span class="p">}))</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>    
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>    <span style="color:#3e4460">//Set match found 
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>    <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>genreMatchFound <span style="color:#bc74c4">||</span> keywordMatchFound<span style="color:#56b6c2">){</span>
+</span></span><span style="display:flex;"><span>        matchFound <span style="color:#bc74c4">=</span> <span style="color:#cf5967;background-color:#43454f">true</span><span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#56b6c2">}</span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#3e4460">//Filter movie objects into new arrays of matching movies
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>    <span style="color:#7fbaf5">var</span> bestMatchMovies <span style="color:#bc74c4">=</span> <span style="color:#56b6c2">[];</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>keywordMatchFound <span style="color:#bc74c4">&amp;&amp;</span> genreMatchFound<span style="color:#56b6c2">){</span> <span style="color:#3e4460">//movies matching genre &amp;&amp; keyword
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>        bestMatchMovies<span style="color:#56b6c2">.</span>push<span style="color:#56b6c2">(</span>movieData<span style="color:#56b6c2">.</span>filter<span style="color:#56b6c2">(</span>movie <span style="color:#56b6c2">=&gt;</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>keywordMatches<span style="color:#56b6c2">.</span>includes<span style="color:#56b6c2">(</span>movie<span style="color:#56b6c2">.</span>id<span style="color:#56b6c2">)</span> <span style="color:#bc74c4">&amp;&amp;</span> genreMatches<span style="color:#56b6c2">.</span>includes<span style="color:#56b6c2">(</span>movie<span style="color:#56b6c2">.</span>id<span style="color:#56b6c2">)){</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#7fbaf5">let</span> tempMovie <span style="color:#bc74c4">=</span> movie<span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>                tempMovie<span style="color:#56b6c2">.</span>genreMatch <span style="color:#bc74c4">=</span> <span style="color:#cf5967;background-color:#43454f">true</span><span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>                tempMovie<span style="color:#56b6c2">.</span>keywordMatch <span style="color:#bc74c4">=</span> <span style="color:#cf5967;background-color:#43454f">true</span><span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#7fbaf5">return</span> tempMovie<span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#56b6c2">}</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#56b6c2">}))</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7fbaf5">else</span> <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>genreMatchFound<span style="color:#56b6c2">){</span><span style="color:#3e4460">//movies matching only genre
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>        bestMatchMovies<span style="color:#56b6c2">.</span>push<span style="color:#56b6c2">(</span>movieData<span style="color:#56b6c2">.</span>filter<span style="color:#56b6c2">(</span>movie <span style="color:#56b6c2">=&gt;</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>genreMatches<span style="color:#56b6c2">.</span>includes<span style="color:#56b6c2">(</span>movie<span style="color:#56b6c2">.</span>id<span style="color:#56b6c2">)){</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#7fbaf5">let</span> tempMovie <span style="color:#bc74c4">=</span> movie<span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>                tempMovie<span style="color:#56b6c2">.</span>genreMatch <span style="color:#bc74c4">=</span> <span style="color:#cf5967;background-color:#43454f">true</span><span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#7fbaf5">return</span> tempMovie<span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#56b6c2">}</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#56b6c2">}))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7fbaf5">else</span> <span style="color:#7fbaf5">if</span> <span style="color:#56b6c2">(</span>keywordMatchFound<span style="color:#56b6c2">)</span> <span style="color:#56b6c2">{</span><span style="color:#3e4460">//movies matching only keyword
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>        bestMatchMovies<span style="color:#56b6c2">.</span>push<span style="color:#56b6c2">(</span>movieData<span style="color:#56b6c2">.</span>filter<span style="color:#56b6c2">(</span>movie <span style="color:#56b6c2">=&gt;</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>keywordMatches<span style="color:#56b6c2">.</span>includes<span style="color:#56b6c2">(</span>movie<span style="color:#56b6c2">.</span>id<span style="color:#56b6c2">)){</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#7fbaf5">let</span> tempMovie <span style="color:#bc74c4">=</span> movie<span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>                tempMovie<span style="color:#56b6c2">.</span>keywordMatch <span style="color:#bc74c4">=</span> <span style="color:#cf5967;background-color:#43454f">true</span><span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#7fbaf5">return</span> tempMovie<span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#56b6c2">}</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#56b6c2">}))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#56b6c2">}</span>    
 </span></span></code></pre></div><p><strong>5.</strong> Return this new array of only matching movie objects, along with the search terms</p>
-<h2 id="it-works">It Works!</h2>
+<hr>
+<h1 id="it-works">It Works!</h1>
+<hr>
 <ul>
 <li>
 <p>Front end team was able to use EJS and to dynamically create the checkboxes  on the home page, and access that data on the results page to display the matching movies</p>
@@ -685,7 +689,9 @@ The solution we landed on  was to allow the user to type in a keyword or two, an
 </li>
 </ul>
 <img src = "/images/posts/resultspage.PNG">
+<hr>
 <h1 id="moving-forward">Moving Forward</h1>
+<hr>
 <ul>
 <li>The next step will be a lot of html and css - something that I know very little about. I expect to be learning A LOT about front end soon.</li>
 </ul>
