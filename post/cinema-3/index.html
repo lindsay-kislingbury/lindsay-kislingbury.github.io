@@ -10,7 +10,7 @@
   <title>
     
       
-        Cinema: Completing A Project |
+        Cinema: Completing a Project |
       Lindsay Kislingbury
 
   </title>
@@ -28,8 +28,8 @@
     
     <link
       rel="stylesheet"
-      href="/scss/main.min.38971f63b7369f98e4f1d8a890562a75d3f3a039cd32bf4dbc72e17cc1bf568d.css"
-      integrity="sha256-OJcfY7c2n5jk8diokFYqddPzoDnNMr9NvHLhfMG/Vo0="
+      href="/scss/main.min.6e117ad1fe401e4e3d0a7f32c63109604e561101ab56fd3b4f337151ce863e63.css"
+      integrity="sha256-bhF60f5AHk49Cn8yxjEJYE5WEQGrVv07TzNxUc6GPmM="
       crossorigin="anonymous"
       type="text/css"
     />
@@ -113,14 +113,14 @@
   <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://.github.io/images/site-feature-image.png"/>
 
-<meta name="twitter:title" content="Cinema: Completing A Project"/>
-<meta name="twitter:description" content="This will be my first attempt at styling a web page."/>
+<meta name="twitter:title" content="Cinema: Completing a Project"/>
+<meta name="twitter:description" content="I decided on a fuzzy search of the database for matching movies and needed to send the results to the front end in a way that was easy to access."/>
 
 
 
   
-  <meta property="og:title" content="Cinema: Completing A Project" />
-<meta property="og:description" content="This will be my first attempt at styling a web page." />
+  <meta property="og:title" content="Cinema: Completing a Project" />
+<meta property="og:description" content="I decided on a fuzzy search of the database for matching movies and needed to send the results to the front end in a way that was easy to access." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://&lt;lindsay-kislingbury&gt;.github.io/post/cinema-3/" /><meta property="og:image" content="https://.github.io/images/site-feature-image.png"/><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-11-12T21:47:41+00:00" />
@@ -137,12 +137,12 @@
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "articleSection": "post",
-        "name": "Cinema: Completing A Project",
-        "headline": "Cinema: Completing A Project",
+        "name": "Cinema: Completing a Project",
+        "headline": "Cinema: Completing a Project",
         "alternativeHeadline": "",
         "description": "
       
-        This will be my first attempt at styling a web page.
+        I decided on a fuzzy search of the database for matching movies and needed to send the results to the front end in a way that was easy to access.
 
 
       
@@ -197,7 +197,7 @@
 
     ,
         "url" : "https:\/\/\u003clindsay-kislingbury\u003e.github.io\/post\/cinema-3\/",
-        "wordCount" : "450",
+        "wordCount" : "1094",
         "genre" : [ ],
         "keywords" : [ 
       
@@ -411,30 +411,187 @@
             <span class="post__meta-text"
               >
                 
-                  12/11/2022
+                  November 12, 2022
                 
 
               
             </span>
           </li>
           <li class="post__meta-item">
-            <em class="fas fa-stopwatch post__meta-icon"></em>
-            <span class="post__meta-text">3-minute read</span>
+            
+            
           </li>
         </ul>
-      <p>This will be my first attempt at styling a web page.  <br>
-Initally, I was tempted to use bootstrap, but ultimately went with html/css only. I want to build a good foundation in the basics.</p>
+      <p>I decided on a fuzzy search of the database for matching movies and needed to send the results to the front end in a way that was easy to access.</p>
+<p>I also needed to create a simple way to display such a large amount of data.</p>
+<p><a href="https://github.com/lindsay-kislingbury/Cinema">🔗 Cinema on Github</a></p>
 <hr>
 <h1 id="goals">Goals</h1>
 <hr>
 <ul>
+<li>Get search terms from the index page, send those search terms along with the matching movies to the results page.</li>
 <li>Style the two html pages so that they are intuitive, clear, and functional.</li>
 <li><strong>Complete</strong> the project, even if it isn&rsquo;t 100% perfect.</li>
 </ul>
 <hr>
-<h1 id="so-many-flexboxes">So&hellip; Many&hellip; Flexboxes</h1>
+<h1 id="searching-for-movies">Searching For Movies</h1>
 <hr>
 <ul>
+<li>First, I created a modified array of movie data that includes only the data I need for searching:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>    <span style="color:#7fbaf5">let</span> movieSearchList <span style="color:#bc74c4">=</span> <span style="color:#56b6c2">[];</span>
+</span></span><span style="display:flex;"><span>    movieData<span style="color:#56b6c2">.</span>forEach<span style="color:#56b6c2">(</span>movie <span style="color:#56b6c2">=&gt;</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>        movieSearchList<span style="color:#56b6c2">.</span>push<span style="color:#56b6c2">({</span>
+</span></span><span style="display:flex;"><span>            movieId<span style="color:#bc74c4">:</span> movie<span style="color:#56b6c2">.</span>id<span style="color:#56b6c2">,</span>
+</span></span><span style="display:flex;"><span>            keywords<span style="color:#bc74c4">:</span> movie<span style="color:#56b6c2">.</span>keywords<span style="color:#56b6c2">,</span>
+</span></span><span style="display:flex;"><span>            genres<span style="color:#bc74c4">:</span> movie<span style="color:#56b6c2">.</span>genres
+</span></span><span style="display:flex;"><span>        <span style="color:#56b6c2">})</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#56b6c2">});</span> 
+</span></span></code></pre></div><ul>
+<li>
+<p>Because the list of keywords present in the entire dataset was fairly large, I wouldn&rsquo;t be able to display all available keywords on the search page to choose from. <br>
+The solution we landed on  was to allow the user to type in a keyword or two, and do a fuzzy search on our existing list of keywords in the data set.</p>
+</li>
+<li>
+<p>A <strong>fuzzy search</strong> is an approximate search, we didn&rsquo;t want to match keywords exactly. If a user searched &ldquo;pirates&rdquo;, we also wanted to return movies that had keywords like &ldquo;pirate ship&rdquo; and &ldquo;pirate&rdquo;</p>
+</li>
+<li>
+<p>I ended up using a library called <a href="https://fusejs.io/">Fuse.js</a>. The library is lightweight, has no dependencies, and allows you to set a few options like case sensitivity and the ability to sort by match score.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>  <span style="color:#7fbaf5">const</span> Fuse <span style="color:#bc74c4">=</span> require<span style="color:#56b6c2">(</span><span style="color:#82cc6a">&#39;fuse.js&#39;</span><span style="color:#56b6c2">);</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">var</span> options <span style="color:#bc74c4">=</span> <span style="color:#56b6c2">{</span> <span style="color:#3e4460">//Fuse options
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>      includeScore<span style="color:#bc74c4">:</span> <span style="color:#cf5967;background-color:#43454f">false</span><span style="color:#56b6c2">,</span>
+</span></span><span style="display:flex;"><span>      isCaseSensitive<span style="color:#bc74c4">:</span> <span style="color:#cf5967;background-color:#43454f">false</span><span style="color:#56b6c2">,</span>
+</span></span><span style="display:flex;"><span>      includeMatches<span style="color:#bc74c4">:</span> <span style="color:#cf5967;background-color:#43454f">false</span><span style="color:#56b6c2">,</span>
+</span></span><span style="display:flex;"><span>      shouldSort<span style="color:#bc74c4">:</span> <span style="color:#cf5967;background-color:#43454f">true</span><span style="color:#56b6c2">,</span>
+</span></span><span style="display:flex;"><span>      findAllMatches<span style="color:#bc74c4">:</span> <span style="color:#cf5967;background-color:#43454f">true</span><span style="color:#56b6c2">,</span>
+</span></span><span style="display:flex;"><span>      threshold<span style="color:#bc74c4">:</span> <span style="color:#56b6c2">0.3</span><span style="color:#56b6c2">,</span>
+</span></span><span style="display:flex;"><span>      keys<span style="color:#bc74c4">:</span> <span style="color:#56b6c2">[</span><span style="color:#82cc6a">&#39;keywords&#39;</span><span style="color:#56b6c2">],</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#56b6c2">}</span>
+</span></span></code></pre></div></li>
+</ul>
+<h2 id="how-the-search-works">How the search works</h2>
+<p><strong>1.</strong> Use Fuse.js to find all movie id&rsquo;s for movies matching the keywords input by the user</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>  <span style="color:#3e4460">//Keyword Search. Store matching movieIds in array
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>  <span style="color:#7fbaf5">let</span> fuse <span style="color:#bc74c4">=</span> <span style="color:#7fbaf5">new</span> Fuse<span style="color:#56b6c2">(</span>movieSearchList<span style="color:#56b6c2">,</span> options<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">let</span> keywordMatches <span style="color:#bc74c4">=</span> <span style="color:#56b6c2">[];</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">var</span> keywordMatchFound <span style="color:#bc74c4">=</span> <span style="color:#cf5967;background-color:#43454f">false</span><span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>searchKeywords<span style="color:#56b6c2">){</span><span style="color:#3e4460">//Find keyword matches using fuse.js
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>      <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>searchKeywords<span style="color:#56b6c2">){</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#7fbaf5">let</span> result <span style="color:#bc74c4">=</span> fuse<span style="color:#56b6c2">.</span>search<span style="color:#56b6c2">(</span>searchKeywords<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>result<span style="color:#56b6c2">){</span>
+</span></span><span style="display:flex;"><span>              result<span style="color:#56b6c2">.</span>forEach<span style="color:#56b6c2">(</span>result <span style="color:#56b6c2">=&gt;</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>                  keywordMatches<span style="color:#56b6c2">.</span>push<span style="color:#56b6c2">(</span>result<span style="color:#56b6c2">.</span>item<span style="color:#56b6c2">.</span>movieId<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#56b6c2">})</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>keywordMatches<span style="color:#56b6c2">.</span>length <span style="color:#bc74c4">&gt;</span> <span style="color:#56b6c2">0</span><span style="color:#56b6c2">){</span>
+</span></span><span style="display:flex;"><span>          keywordMatchFound <span style="color:#bc74c4">=</span> <span style="color:#cf5967;background-color:#43454f">true</span><span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#56b6c2">}</span> <span style="color:#7fbaf5">else</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>          keywordMatchFound <span style="color:#bc74c4">=</span> <span style="color:#cf5967;background-color:#43454f">false</span><span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#56b6c2">}</span>
+</span></span></code></pre></div><p><strong>2.</strong> Find all movie id&rsquo;s for movies matching genres input by the user. This is an exact match to the genre name associate with a checkbox on the search page</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>  <span style="color:#3e4460">//Keyword Search. Store matching movieIds in array
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>  <span style="color:#7fbaf5">let</span> fuse <span style="color:#bc74c4">=</span> <span style="color:#7fbaf5">new</span> Fuse<span style="color:#56b6c2">(</span>movieSearchList<span style="color:#56b6c2">,</span> options<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">let</span> keywordMatches <span style="color:#bc74c4">=</span> <span style="color:#56b6c2">[];</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">var</span> keywordMatchFound <span style="color:#bc74c4">=</span> <span style="color:#cf5967;background-color:#43454f">false</span><span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>searchKeywords<span style="color:#56b6c2">){</span><span style="color:#3e4460">//Find keyword matches using fuse.js
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>      <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>searchKeywords<span style="color:#56b6c2">){</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#7fbaf5">let</span> result <span style="color:#bc74c4">=</span> fuse<span style="color:#56b6c2">.</span>search<span style="color:#56b6c2">(</span>searchKeywords<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>result<span style="color:#56b6c2">){</span>
+</span></span><span style="display:flex;"><span>              result<span style="color:#56b6c2">.</span>forEach<span style="color:#56b6c2">(</span>result <span style="color:#56b6c2">=&gt;</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>                  keywordMatches<span style="color:#56b6c2">.</span>push<span style="color:#56b6c2">(</span>result<span style="color:#56b6c2">.</span>item<span style="color:#56b6c2">.</span>movieId<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#56b6c2">})</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>keywordMatches<span style="color:#56b6c2">.</span>length <span style="color:#bc74c4">&gt;</span> <span style="color:#56b6c2">0</span><span style="color:#56b6c2">){</span>
+</span></span><span style="display:flex;"><span>          keywordMatchFound <span style="color:#bc74c4">=</span> <span style="color:#cf5967;background-color:#43454f">true</span><span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#56b6c2">}</span> <span style="color:#7fbaf5">else</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>          keywordMatchFound <span style="color:#bc74c4">=</span> <span style="color:#cf5967;background-color:#43454f">false</span><span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#56b6c2">}</span>
+</span></span></code></pre></div><p><strong>3.</strong> Create an array of movie ids that match <strong>BOTH</strong> genre and keyword - excluding duplicates</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>  <span style="color:#7fbaf5">let</span> bestMatches <span style="color:#bc74c4">=</span> <span style="color:#56b6c2">[];</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>keywordMatches<span style="color:#56b6c2">.</span>length<span style="color:#bc74c4">&gt;</span><span style="color:#56b6c2">0</span><span style="color:#56b6c2">){</span> 
+</span></span><span style="display:flex;"><span>      <span style="color:#7fbaf5">for</span><span style="color:#56b6c2">(</span><span style="color:#7fbaf5">const</span> genre <span style="color:#7fbaf5">of</span> genreMatches<span style="color:#56b6c2">){</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>keywordMatches<span style="color:#56b6c2">.</span>includes<span style="color:#56b6c2">(</span>genre<span style="color:#56b6c2">)){</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span><span style="color:#bc74c4">!</span>bestMatches<span style="color:#56b6c2">.</span>includes<span style="color:#56b6c2">(</span>genre<span style="color:#56b6c2">)){</span>
+</span></span><span style="display:flex;"><span>                  bestMatches<span style="color:#56b6c2">.</span>push<span style="color:#56b6c2">(</span>genre<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#7fbaf5">for</span><span style="color:#56b6c2">(</span><span style="color:#7fbaf5">const</span> keyword <span style="color:#7fbaf5">of</span> keywordMatches<span style="color:#56b6c2">){</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>genreMatches<span style="color:#56b6c2">.</span>includes<span style="color:#56b6c2">(</span>keyword<span style="color:#56b6c2">)){</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span><span style="color:#bc74c4">!</span>bestMatches<span style="color:#56b6c2">.</span>includes<span style="color:#56b6c2">(</span>keyword<span style="color:#56b6c2">)){</span>
+</span></span><span style="display:flex;"><span>                  bestMatches<span style="color:#56b6c2">.</span>push<span style="color:#56b6c2">(</span>keyword<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#7fbaf5">else</span><span style="color:#56b6c2">{</span> 
+</span></span><span style="display:flex;"><span>      <span style="color:#7fbaf5">for</span><span style="color:#56b6c2">(</span><span style="color:#7fbaf5">const</span> keyword <span style="color:#7fbaf5">of</span> genreMatches<span style="color:#56b6c2">){</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span><span style="color:#bc74c4">!</span>bestMatches<span style="color:#56b6c2">.</span>includes<span style="color:#56b6c2">(</span>keyword<span style="color:#56b6c2">)){</span>
+</span></span><span style="display:flex;"><span>              bestMatches<span style="color:#56b6c2">.</span>push<span style="color:#56b6c2">(</span>keyword<span style="color:#56b6c2">);</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#56b6c2">}</span>
+</span></span></code></pre></div><p><strong>4.</strong> Create an array of all matching movie objects</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9c9c9;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>    <span style="color:#3e4460">//Set match found 
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>    <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>genreMatchFound <span style="color:#bc74c4">||</span> keywordMatchFound<span style="color:#56b6c2">){</span>
+</span></span><span style="display:flex;"><span>        matchFound <span style="color:#bc74c4">=</span> <span style="color:#cf5967;background-color:#43454f">true</span><span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#56b6c2">}</span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#3e4460">//Filter movie objects into new arrays of matching movies
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>    <span style="color:#7fbaf5">var</span> bestMatchMovies <span style="color:#bc74c4">=</span> <span style="color:#56b6c2">[];</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>keywordMatchFound <span style="color:#bc74c4">&amp;&amp;</span> genreMatchFound<span style="color:#56b6c2">){</span> <span style="color:#3e4460">//movies matching genre &amp;&amp; keyword
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>        bestMatchMovies<span style="color:#56b6c2">.</span>push<span style="color:#56b6c2">(</span>movieData<span style="color:#56b6c2">.</span>filter<span style="color:#56b6c2">(</span>movie <span style="color:#56b6c2">=&gt;</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>keywordMatches<span style="color:#56b6c2">.</span>includes<span style="color:#56b6c2">(</span>movie<span style="color:#56b6c2">.</span>id<span style="color:#56b6c2">)</span> <span style="color:#bc74c4">&amp;&amp;</span> genreMatches<span style="color:#56b6c2">.</span>includes<span style="color:#56b6c2">(</span>movie<span style="color:#56b6c2">.</span>id<span style="color:#56b6c2">)){</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#7fbaf5">let</span> tempMovie <span style="color:#bc74c4">=</span> movie<span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>                tempMovie<span style="color:#56b6c2">.</span>genreMatch <span style="color:#bc74c4">=</span> <span style="color:#cf5967;background-color:#43454f">true</span><span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>                tempMovie<span style="color:#56b6c2">.</span>keywordMatch <span style="color:#bc74c4">=</span> <span style="color:#cf5967;background-color:#43454f">true</span><span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#7fbaf5">return</span> tempMovie<span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#56b6c2">}</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#56b6c2">}))</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7fbaf5">else</span> <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>genreMatchFound<span style="color:#56b6c2">){</span><span style="color:#3e4460">//movies matching only genre
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>        bestMatchMovies<span style="color:#56b6c2">.</span>push<span style="color:#56b6c2">(</span>movieData<span style="color:#56b6c2">.</span>filter<span style="color:#56b6c2">(</span>movie <span style="color:#56b6c2">=&gt;</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>genreMatches<span style="color:#56b6c2">.</span>includes<span style="color:#56b6c2">(</span>movie<span style="color:#56b6c2">.</span>id<span style="color:#56b6c2">)){</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#7fbaf5">let</span> tempMovie <span style="color:#bc74c4">=</span> movie<span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>                tempMovie<span style="color:#56b6c2">.</span>genreMatch <span style="color:#bc74c4">=</span> <span style="color:#cf5967;background-color:#43454f">true</span><span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#7fbaf5">return</span> tempMovie<span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#56b6c2">}</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#56b6c2">}))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#56b6c2">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7fbaf5">else</span> <span style="color:#7fbaf5">if</span> <span style="color:#56b6c2">(</span>keywordMatchFound<span style="color:#56b6c2">)</span> <span style="color:#56b6c2">{</span><span style="color:#3e4460">//movies matching only keyword
+</span></span></span><span style="display:flex;"><span><span style="color:#3e4460"></span>        bestMatchMovies<span style="color:#56b6c2">.</span>push<span style="color:#56b6c2">(</span>movieData<span style="color:#56b6c2">.</span>filter<span style="color:#56b6c2">(</span>movie <span style="color:#56b6c2">=&gt;</span> <span style="color:#56b6c2">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#7fbaf5">if</span><span style="color:#56b6c2">(</span>keywordMatches<span style="color:#56b6c2">.</span>includes<span style="color:#56b6c2">(</span>movie<span style="color:#56b6c2">.</span>id<span style="color:#56b6c2">)){</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#7fbaf5">let</span> tempMovie <span style="color:#bc74c4">=</span> movie<span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>                tempMovie<span style="color:#56b6c2">.</span>keywordMatch <span style="color:#bc74c4">=</span> <span style="color:#cf5967;background-color:#43454f">true</span><span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#7fbaf5">return</span> tempMovie<span style="color:#56b6c2">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#56b6c2">}</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#56b6c2">}))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#56b6c2">}</span>    
+</span></span></code></pre></div><p><strong>5.</strong> Return this new array of only matching movie objects, along with the search terms</p>
+<hr>
+<h1 id="it-works">It Works!</h1>
+<hr>
+<ul>
+<li>
+<p>Front end team was able to use EJS and to dynamically create the checkboxes  on the home page, and access that data on the results page to display the matching movies</p>
+</li>
+<li>
+<p>Here is what we get when we search for the keywords &ldquo;alien&rdquo; and &ldquo;gross&rdquo; combined with the genres &ldquo;Horror&rdquo; and &ldquo;Action&rdquo;</p>
+</li>
+</ul>
+<img src = "/images/posts/resultspage.PNG">  
+<hr>
+<h1 id="html--css">HTML &amp; CSS</h1>
+<hr>
+<ul>
+<li>
+<p>This will be my first attempt at styling a web page. Initally, I was tempted to use bootstrap, but ultimately went with html/css only. I want to build a good foundation in the basics.</p>
+</li>
 <li>
 <p>I cannot overstate how helpful this guide <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-background">A Complete Guide to Flexbox</a> was for learning how to use flexboxes. I relied almost entirely on this guide.</p>
 </li>
@@ -495,7 +652,7 @@ Initally, I was tempted to use bootstrap, but ultimately went with html/css only
 <hr>
 <ul>
 <li>Going into the project with zero experience with web development, I knew that the learning curve would be sharp. I spent a lot of time on this project reading documentation and had to adjust my expectations for the finished product a lot.</li>
-<li>I&rsquo;ve learned the fundamentals of HTTP methods, Express Routing and HTML.</li>
+<li>I&rsquo;ve learned the fundamentals of HTTP methods, Node, Express Routing and HTML.</li>
 </ul>
 <h1 id="moving-forward">Moving Forward</h1>
 <ul>
