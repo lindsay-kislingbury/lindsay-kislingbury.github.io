@@ -10,11 +10,14 @@ author = "Lindsay Kislingbury"
 
 ## Technical Skills
 
-- **Languages:** C#, JavaScript, Java, C++, SQL
-- **Web Technologies:** Vue.js, .NET 8, Node.js, Express, OAuth 2.0, HTML, CSS
-- **Cloud & Databases:** Azure (SQL, Service Bus, App Service, Identity), MongoDB, Entity Framework Core
-- **DevOps & Tools:** CI/CD, GitHub Actions, Git, Visual Studio, VS Code, Azure CLI, dotnet CLI, Maven
-- **Frameworks & Libraries:** Entity Framework Core, Vue.js, Express.js
+|                             |                                                                                  |
+| --------------------------- | -------------------------------------------------------------------------------- |
+| **Languages:**              | C#, JavaScript, Java, C++, SQL                                                   |
+| **Web Technologies:**       | Vue.js, .NET 8, Node.js, Express, OAuth 2.0, HTML, CSS                           |
+| **Cloud & Databases:**      | Azure (SQL, Service Bus, App Service, Identity), MongoDB, Entity Framework Core  |
+| **DevOps & Tools:**         | CI/CD, GitHub Actions, Git, Visual Studio, VS Code, Azure CLI, dotnet CLI, Maven |
+| **Frameworks & Libraries:** | Entity Framework Core, Vue.js, Express.js                                        |
+|                             |
 
 ## Experience
 
