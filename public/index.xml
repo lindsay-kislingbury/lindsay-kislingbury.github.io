@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lindsay Kislingbury on Lindsay Kislingbury&#39;s Portfolio</title>
+    <link>https://lindsay-kislingbury.github.io/</link>
+    <description>Recent content in Lindsay Kislingbury on Lindsay Kislingbury&#39;s Portfolio</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 18 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lindsay-kislingbury.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Me</title>
+      <link>https://lindsay-kislingbury.github.io/about/</link>
+      <pubDate>Fri, 18 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://lindsay-kislingbury.github.io/about/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m Lindsay Kislingbury, a [your profession/field] based in [your location].&lt;/p&gt;&#xA;&lt;p&gt;[Add a brief description about yourself, your skills, and your interests.]&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My First Blog Post</title>
+      <link>https://lindsay-kislingbury.github.io/posts/first-post/</link>
+      <pubDate>Fri, 18 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://lindsay-kislingbury.github.io/posts/first-post/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Resume</title>
+      <link>https://lindsay-kislingbury.github.io/resume/</link>
+      <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://lindsay-kislingbury.github.io/resume/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;technical-skills&#34;&gt;Technical Skills&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Languages:&lt;/strong&gt; C#, JavaScript, Java, C++, SQL&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Web Technologies:&lt;/strong&gt; Vue.js, .NET 8, Node.js, Express, OAuth 2.0, HTML, CSS&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Cloud &amp;amp; Databases:&lt;/strong&gt; Azure (SQL, Service Bus, App Service, Identity), MongoDB, Entity Framework Core&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;DevOps &amp;amp; Tools:&lt;/strong&gt; CI/CD, GitHub Actions, Git, Visual Studio, VS Code, Azure CLI, dotnet CLI, Maven&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Frameworks &amp;amp; Libraries:&lt;/strong&gt; Entity Framework Core, Vue.js, Express.js&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;experience&#34;&gt;Experience&lt;/h2&gt;&#xA;&lt;h3 id=&#34;full-stack-software-engineer-intern-remote&#34;&gt;Full Stack Software Engineer Intern (Remote)&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Bytewish Foundation, Canton, SD&lt;/strong&gt; | &lt;em&gt;Feb. 2024 – Present&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

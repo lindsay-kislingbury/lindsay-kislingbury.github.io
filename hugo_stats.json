@@ -1,0 +1,63 @@
+{
+  "htmlElements": {
+    "tags": [
+      "a",
+      "article",
+      "aside",
+      "body",
+      "button",
+      "div",
+      "em",
+      "h1",
+      "h2",
+      "h3",
+      "head",
+      "hr",
+      "html",
+      "img",
+      "li",
+      "link",
+      "main",
+      "meta",
+      "nav",
+      "p",
+      "script",
+      "span",
+      "strong",
+      "title",
+      "ul"
+    ],
+    "classes": [
+      "container",
+      "content",
+      "main-content",
+      "mdi",
+      "mdi-email",
+      "mdi-github",
+      "mdi-linkedin",
+      "mdi-theme-light-dark",
+      "profile",
+      "profile-pic",
+      "profile-text",
+      "sidebar",
+      "sidebar-content",
+      "social-links",
+      "social-links-and-toggle",
+      "theme-toggle-wrapper"
+    ],
+    "ids": [
+      "about-me",
+      "california-polytechnic-state-university-pomona-ca",
+      "connect-with-me",
+      "education",
+      "experience",
+      "full-stack-software-engineer-intern-remote",
+      "projects",
+      "riverside-city-college-riverside-ca",
+      "shecodes-semester-long-project--nodejs-express-ejs",
+      "technical-skills",
+      "theme-toggle",
+      "time-keeping--nodejs-express-mongodb-render"
+    ]
+  }
+}
