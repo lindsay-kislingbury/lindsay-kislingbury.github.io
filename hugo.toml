@@ -1,6 +1,6 @@
 baseURL = "https://lindsay-kislingbury.github.io/"
 languageCode = "en-us"
-title = "Lindsay Kislingbury's Portfolio"
+title = "Lindsay Kislingbury"
 
 [build]
 writeStats = true
