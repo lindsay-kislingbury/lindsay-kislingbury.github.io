@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Lindsay Kislingbury on Lindsay Kislingbury&#39;s Portfolio</title>
-    <link>https://lindsay-kislingbury.github.io/</link>
-    <description>Recent content in Lindsay Kislingbury on Lindsay Kislingbury&#39;s Portfolio</description>
+    <title>About Me on Lindsay Kislingbury&#39;s Portfolio</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in About Me on Lindsay Kislingbury&#39;s Portfolio</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Oct 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://lindsay-kislingbury.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/resume/</link>
+      <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resume/</guid>
+      <description>&lt;h2 id=&#34;professional-summary&#34;&gt;Professional Summary&lt;/h2&gt;&#xA;&lt;p&gt;Senior Computer Science student and Lead Full Stack Engineer with end-to-end experience architecting cloud-native web applications. Specializes in building scalable, secure systems using &lt;strong&gt;C#, .NET 9, and Azure&lt;/strong&gt;, with a strong focus on clean architecture and business process automation. Proven ability to translate complex stakeholder requirements into production-ready software.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;technical-skills&#34;&gt;Technical Skills&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Languages:&lt;/strong&gt; &lt;code&gt;C#&lt;/code&gt; &lt;code&gt;JavaScript&lt;/code&gt; &lt;code&gt;TypeScript&lt;/code&gt; &lt;code&gt;SQL&lt;/code&gt; &lt;code&gt;Java&lt;/code&gt; &lt;code&gt;C++&lt;/code&gt; &lt;code&gt;HTML/CSS&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Frameworks:&lt;/strong&gt; &lt;code&gt;.NET 9&lt;/code&gt; &lt;code&gt;ASP.NET Core&lt;/code&gt; &lt;code&gt;Vue.js&lt;/code&gt; &lt;code&gt;Node.js&lt;/code&gt; &lt;code&gt;Entity Framework Core&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Cloud &amp;amp; Infra:&lt;/strong&gt; &lt;code&gt;Azure (App Service, SQL, Service Bus, Entra ID)&lt;/code&gt; &lt;code&gt;GitHub Actions&lt;/code&gt; &lt;code&gt;Docker&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tools &amp;amp; Concepts:&lt;/strong&gt; &lt;code&gt;Git&lt;/code&gt; &lt;code&gt;RESTful APIs&lt;/code&gt; &lt;code&gt;OAuth 2.0&lt;/code&gt; &lt;code&gt;CI/CD&lt;/code&gt; &lt;code&gt;MVC Architecture&lt;/code&gt; &lt;code&gt;Agile&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;experience&#34;&gt;Experience&lt;/h2&gt;&#xA;&lt;h3 id=&#34;full-stack-software-engineer-lead&#34;&gt;Full Stack Software Engineer (Lead)&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Bytewish Foundation&lt;/strong&gt; | &lt;em&gt;Feb. 2024 – Present&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>About Me</title>
-      <link>https://lindsay-kislingbury.github.io/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Fri, 18 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://lindsay-kislingbury.github.io/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m Lindsay Kislingbury, a [your profession/field] based in [your location].&lt;/p&gt;&#xA;&lt;p&gt;[Add a brief description about yourself, your skills, and your interests.]&lt;/p&gt;</description>
     </item>
     <item>
       <title>My First Blog Post</title>
-      <link>https://lindsay-kislingbury.github.io/posts/first-post/</link>
+      <link>http://localhost:1313/posts/first-post/</link>
       <pubDate>Fri, 18 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://lindsay-kislingbury.github.io/posts/first-post/</guid>
+      <guid>http://localhost:1313/posts/first-post/</guid>
       <description></description>
-    </item>
-    <item>
-      <title>Resume</title>
-      <link>https://lindsay-kislingbury.github.io/resume/</link>
-      <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://lindsay-kislingbury.github.io/resume/</guid>
-      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;technical-skills&#34;&gt;Technical Skills&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;&lt;/th&gt;&#xA;          &lt;th&gt;&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Languages:&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;C#, JavaScript, Java, C++, SQL&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Web Technologies:&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Vue.js, .NET 8, Node.js, Express, OAuth 2.0, HTML, CSS&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Cloud &amp;amp; Databases:&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Azure (SQL, Service Bus, App Service, Identity), MongoDB, Entity Framework Core&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;DevOps &amp;amp; Tools:&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;CI/CD, GitHub Actions, Git, Visual Studio, VS Code, Azure CLI, dotnet CLI, Maven&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;Frameworks &amp;amp; Libraries:&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Entity Framework Core, Vue.js, Express.js&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;experience&#34;&gt;Experience&lt;/h2&gt;&#xA;&lt;h3 id=&#34;full-stack-software-engineer-intern-remote&#34;&gt;Full Stack Software Engineer Intern (Remote)&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Bytewish Foundation, Canton, SD&lt;/strong&gt; | &lt;em&gt;Feb. 2024 – Present&lt;/em&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

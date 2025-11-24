@@ -1,69 +1,60 @@
 +++
-title = "Resume"
-description = ""
-date = "2023-04-10"
+description = "Lindsay Kislingbury - Full Stack Software Engineer"
+date = "2025-11-24"
 aliases = ["resume"]
 author = "Lindsay Kislingbury"
 +++
+
+## Professional Summary
+
+Senior Computer Science student and Lead Full Stack Engineer with end-to-end experience architecting cloud-native web applications. Specializes in building scalable, secure systems using **C#, .NET 9, and Azure**, with a strong focus on clean architecture and business process automation. Proven ability to translate complex stakeholder requirements into production-ready software.
 
 ---
 
 ## Technical Skills
 
-|                             |                                                                                  |
-| --------------------------- | -------------------------------------------------------------------------------- |
-| **Languages:**              | C#, JavaScript, Java, C++, SQL                                                   |
-| **Web Technologies:**       | Vue.js, .NET 8, Node.js, Express, OAuth 2.0, HTML, CSS                           |
-| **Cloud & Databases:**      | Azure (SQL, Service Bus, App Service, Identity), MongoDB, Entity Framework Core  |
-| **DevOps & Tools:**         | CI/CD, GitHub Actions, Git, Visual Studio, VS Code, Azure CLI, dotnet CLI, Maven |
-| **Frameworks & Libraries:** | Entity Framework Core, Vue.js, Express.js                                        |
-|                             |
+*   **Languages:** `C#` `JavaScript` `TypeScript` `SQL` `Java` `C++` `HTML/CSS`
+*   **Frameworks:** `.NET 9` `ASP.NET Core` `Vue.js` `Node.js` `Entity Framework Core`
+*   **Cloud & Infra:** `Azure (App Service, SQL, Service Bus, Entra ID)` `GitHub Actions` `Docker`
+*   **Tools & Concepts:** `Git` `RESTful APIs` `OAuth 2.0` `CI/CD` `MVC Architecture` `Agile`
+
+---
 
 ## Experience
 
-### Full Stack Software Engineer Intern (Remote)
+### Full Stack Software Engineer (Lead)
+**Bytewish Foundation** | *Feb. 2024 – Present*
 
-**Bytewish Foundation, Canton, SD** | _Feb. 2024 – Present_
+*   **System Architecture:** Solely architected a cloud-native ERP platform (Timekeeping) using `.NET 9` and `Vue.js`, translating high-level business requirements into a scalable, multi-tenant system designed to challenge commercial payroll software.
+*   **Geospatial Engineering:** Engineered a custom GIS tax engine using `NetTopologySuite` and SQL Spatial, implementing Point-in-Polygon analysis and geometry simplification algorithms (Douglas-Peucker).
+*   **Financial Engineering:** Developed critical business modules handling complex time tracking rules, automated ACH file generation for payroll, and dynamic invoicing, significantly reducing potential for manual accounting errors.
+*   **Integrations:** Engineered asynchronous background workers using **Azure Service Bus** to handle heavy processing tasks and integrated Microsoft Graph API for automated transactional emails.
+*   **DevOps & Security:** Established a professional engineering environment with CI/CD pipelines (**GitHub Actions**) for automated deployment and implemented Role-Based Access Control (RBAC) via Microsoft Entra ID.
+*   **Documentation:** Authored comprehensive API specifications and system architecture documentation to support the open-source roadmap.
 
-- Developed a modern full-stack payroll management system using Vue.js, .NET 8 minimal API, and Azure SQL, implementing time tracking, pay calculation, and ACH file generation
-- Utilized Entity Framework Core with Azure SQL for database operations, designing data models and implementing efficient queries for the payroll system
-- Designed and built asynchronous payment processing system using Azure Service Bus, enhancing reliability and scalability in a cloud-native environment
-- Implemented OAuth 2.0 authentication and column-level encryption in Azure SQL for robust data security
-- Configured CI/CD pipeline with GitHub Actions for automated build and deployment to Azure App Service, streamlining the development process
+---
 
 ## Education
 
-### California Polytechnic State University, Pomona, CA
+### Bachelor of Science in Computer Science
+**California Polytechnic State University, Pomona** | *Expected May 2026*
 
-**Bachelor of Science in Computer Science** | _Aug. 2021 – Present_
+*   **GPA:** 3.85 | **Honors:** President’s List (Multiple Semesters)
+*   **Core CS:** Data Structures & Algorithms, Object-Oriented Design, Software Engineering, Database Systems
+*   **Systems & Security:** Big Data Analytics & Cloud Computing, Cryptography, Operating Systems, Computer Networks
 
-- GPA: 3.8
-- Honors: President's List 2022-2023
-- Relevant Coursework: Object Oriented Programming (Java), Discrete Structures, Data Structures (Java), Computer Organization, Database Systems (SQL)
+### Associate of Science in Business Administration
+**Riverside City College** | *Aug. 2018 – May 2020*
 
-### Riverside City College, Riverside, CA
+*   **Honors:** Dean's List 2018-2020
 
-**Associate of Science in Business Administration** | _Aug. 2018 – May 2020_
-
-- Honors: Dean's List 2018-2020
-- Relevant Coursework: C++ Programming
+---
 
 ## Projects
 
-### Time Keeping | Node.js, Express, MongoDB, Render
+### Collaborative Web Development (sheCodes)
+**Movie Recommendation Engine** | *Fall 2022*
 
-_Mar 2023 – July 2023_
-
-- Built full-stack time management app using Node.js, Express, MongoDB. Features user clock-in/out, time categorization, and data visualization
-- Implemented secure authentication (Passport.js, bcrypt) and RESTful API with Mongoose ODM for efficient CRUD operations
-- Designed responsive visualizations using JavaScript, jQuery, AJAX for customizable productivity insights
-- Optimized performance and deployed via CI/CD pipeline (GitHub Actions, Render) for scalability and rapid iterations
-
-### sheCodes Semester Long Project | Node.js, Express, EJS
-
-_Fall 2022_
-
-- Developed backend for a movie recommendation website using Node.js and Express
-- Implemented data processing with csv-parser and fuzzy search using Fuse.js
-- Created RESTful API endpoints and utilized EJS for server-side rendering
-- Collaborated effectively in a cross-functional team, coordinating backend and frontend integration
+*   Collaborated in a cross-functional team to build a movie recommendation engine, focusing on backend logic and fuzzy search implementation.
+*   Managed backend API integration and resolved version control conflicts within a shared codebase.
+*   **Stack:** `Node.js` `Express` `EJS` `MongoDB`
