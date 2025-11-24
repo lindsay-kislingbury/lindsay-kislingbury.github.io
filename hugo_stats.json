@@ -5,7 +5,6 @@
       "article",
       "aside",
       "body",
-      "br",
       "button",
       "code",
       "div",
@@ -30,8 +29,10 @@
       "ul"
     ],
     "classes": [
+      "actions-group",
       "container",
       "content",
+      "identity-group",
       "main-content",
       "mdi",
       "mdi-email",
@@ -42,7 +43,9 @@
       "profile-pic",
       "profile-text",
       "sidebar",
+      "sidebar-actions",
       "sidebar-content",
+      "sidebar-header",
       "social-links",
       "social-links-and-toggle",
       "theme-toggle-wrapper"
