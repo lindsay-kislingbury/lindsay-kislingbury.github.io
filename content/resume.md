@@ -7,7 +7,7 @@ author = "Lindsay Kislingbury"
 
 ## Professional Summary
 
-Senior Computer Science student and Lead Full Stack Engineer with end-to-end experience architecting cloud-native web applications. Specializes in building scalable, secure systems using **C#, .NET 9, and Azure**, with a strong focus on clean architecture and business process automation. Proven ability to translate complex stakeholder requirements into production-ready software.
+Senior Computer Science student and Full Stack Engineer with end-to-end experience architecting cloud-native web applications. Specializes in building scalable, secure systems using **C#, .NET 9, and Azure**, with a strong focus on clean architecture and business process automation. Proven ability to translate complex stakeholder requirements into production-ready software.
 
 ---
 
@@ -22,7 +22,7 @@ Senior Computer Science student and Lead Full Stack Engineer with end-to-end exp
 
 ## Experience
 
-### Full Stack Software Engineer (Lead)
+### Full Stack Software Engineer
 **Bytewish Foundation** | *Feb. 2024 – Present*
 
 *   **System Architecture:** Solely architected a cloud-native ERP platform (Timekeeping) using `.NET 9` and `Vue.js`, translating high-level business requirements into a scalable, multi-tenant system designed to challenge commercial payroll software.

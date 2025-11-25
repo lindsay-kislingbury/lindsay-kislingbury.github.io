@@ -6,7 +6,7 @@ draft: false
 
 ## Software Engineer
 
-I am a Senior Computer Science student at **Cal Poly Pomona** and the **Lead Full Stack Engineer** for a nonprofit startup. I specialize in architecting cloud-native SaaS platforms, automating complex business logic, and building secure infrastructure using **C#, .NET 9, and Microsoft Azure**.
+I am a Senior Computer Science student at **Cal Poly Pomona** and the **Full Stack Engineer** for a nonprofit startup. I specialize in architecting cloud-native SaaS platforms, automating complex business logic, and building secure infrastructure using **C#, .NET 9, and Microsoft Azure**.
 
 ---
 
