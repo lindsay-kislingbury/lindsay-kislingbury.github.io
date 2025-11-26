@@ -1,23 +1,27 @@
 ---
 title: "About Me"
-date: 2025-11-24
+date: 2025-11-26
 draft: false
 ---
 
 ## Software Engineer
 
-I am a Senior Computer Science student at **Cal Poly Pomona** and the **Full Stack Engineer** for a nonprofit startup. I specialize in architecting cloud-native SaaS platforms, automating complex business logic, and building secure infrastructure using **C#, .NET 9, and Microsoft Azure**.
+I am a Full Stack Engineer and Senior Computer Science student at **Cal Poly Pomona**. Currently serving as the sole architect for a non-profit startup, I specialize in building cloud-native SaaS platforms where **strict data integrity** meets **modern UI/UX**.
+
+My technical focus is bridging the gap between heavy backend logic and responsive frontend architecture. I build high-reliability systems using **.NET 9 (C#)** and **Azure**, while delivering complex user interfaces with **Vue.js 3** and the Composition API.
 
 ---
 
 ### What I'm Building
 
-Currently, I serve as the **primary architect and developer** for **Timekeeping**, a multi-tenant ERP and payroll platform designed to challenge commercial accounting software.
+Currently, I serve as the **Sole Architect and Developer** for **Timekeeping**, a multi-tenant ERP and payroll platform designed to challenge commercial accounting software.
 
 In this role, I own the full engineering lifecycle:
-*   **Backend Architecture:** Designing high-performance REST APIs and SQL schemas to handle complex financial transactions and ACH file generation.
-*   **Cloud Infrastructure:** Managing Azure resources (App Service, Service Bus, SQL Database) and creating automated CI/CD pipelines via GitHub Actions.
-*   **Geospatial Engineering:** Building custom GIS engines using `NetTopologySuite` to perform point-in-polygon tax jurisdictional analysis.
+
+*   **Complex Frontend Architecture:** Building a reactive **Vue.js** interface with `Pinia` state management and a custom `Tiptap` visual email editor to empower non-technical users.
+*   **Temporal Engineering:** Designing backend algorithms to handle sophisticated time calculations, including automated "Midnight Splits" for payroll and dynamic Daylight Saving Time adjustments.
+*   **Cloud Infrastructure:** Managing Azure resources (App Service, Service Bus, SQL Database) and creating automated CI/CD pipelines via **GitHub Actions** for zero-downtime deployments.
+*   **Financial Infrastructure:** Engineering high-performance API endpoints for on-the-fly **ACH file generation** and point-in-polygon tax jurisdictional analysis using `NetTopologySuite`.
 
 ---
 
@@ -25,19 +29,19 @@ In this role, I own the full engineering lifecycle:
 
 My path to engineering wasn't traditional. Coming from a background in Business Administration, I realized that the most interesting problems weren't in *managing* processes, but in *automating* them.
 
-What started as writing custom scripts to optimize administrative workflows quickly evolved into a passion for software architecture. Today, I combine that business domain knowledge with deep technical expertise to build software that solves real-world operational problems.
+What started as writing custom scripts to optimize administrative workflows quickly evolved into a passion for software architecture. Today, I combine that business domain knowledge with deep technical expertise to translate vague requirements into production-ready software.
 
 ---
 
 ### Tech
 
-*   **Languages:** `C#` `SQL` `TypeScript` `JavaScript` `C++` `Java`
-*   **Frameworks:** `.NET 9` `Entity Framework Core` `Vue.js` `ASP.NET Core`
+*   **Languages:** `C#` `TypeScript` `SQL` `Python` `JavaScript` `C++`
+*   **Frameworks:** `.NET 9` `Vue.js 3` `Pinia` `Tiptap` `Entity Framework Core`
 *   **Cloud & DevOps:** `Azure` `GitHub Actions` `Docker` `Service Bus`
-*   **Concepts:** `Distributed Systems` `OAuth 2.0` `RESTful API Design`
+*   **Testing:** `xUnit` `PyTest` `Playwright`
 
 ---
 
 ### Connect With Me
 
-I am graduating in **May 2026** and looking for roles in **Backend Engineering**, **Cloud Infrastructure**, or **Full Stack Development**.
+I am graduating in **May 2026** and looking for **Software Engineering** opportunities where I can solve complex technical challenges. While I am open to various domains, I have a particular passion for **Open Source** and **Privacy-Focused** software.

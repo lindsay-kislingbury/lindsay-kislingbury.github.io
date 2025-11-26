@@ -29,17 +29,14 @@
       "ul"
     ],
     "classes": [
-      "actions-group",
       "container",
       "content",
-      "identity-group",
       "main-content",
       "mdi",
       "mdi-email",
       "mdi-github",
       "mdi-linkedin",
       "mdi-theme-light-dark",
-      "profile",
       "profile-pic",
       "profile-text",
       "sidebar",
@@ -47,7 +44,6 @@
       "sidebar-content",
       "sidebar-header",
       "social-links",
-      "social-links-and-toggle",
       "theme-toggle-wrapper"
     ],
     "ids": [
@@ -55,9 +51,10 @@
       "bachelor-of-science-in-computer-science",
       "collaborative-web-development-shecodes",
       "connect-with-me",
+      "draft-false",
       "education",
       "experience",
-      "full-stack-software-engineer-lead",
+      "full-stack-software-engineer",
       "my-background",
       "professional-summary",
       "projects",
