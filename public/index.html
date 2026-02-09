@@ -10,7 +10,7 @@
         
         
         
-        <link rel="stylesheet" href="http://localhost:1313/scss/main.min.a730d02bcd49744ffea5c90fe0a63dbc93fa67e1f0bc501b76531cb0a5d4edb4.css" integrity="sha256-pzDQK81JdE/&#43;pckP4KY9vJP6Z&#43;HwvFAbdlMcsKXU7bQ=">
+        <link rel="stylesheet" href="http://localhost:1313/scss/main.min.56cf6bbcc1a8b64c691bc74a8980f8f178c5b79a68122dd9d458941069af4d6e.css" integrity="sha256-Vs9rvMGotkxpG8dKiYD48XjFt5poEi3Z1FiUEGmvTW4=">
         
         <script src="path/to/theme-loader.js"></script>
       </head>
@@ -22,7 +22,7 @@
   <div class="sidebar-header">
     <img src="/images/profile.jpg" alt="Lindsay Kislingbury" class="profile-pic">
     <h1>Lindsay Kislingbury</h1>
-    <div class="profile-text">student, tech explorer and pulp sci-fi enthusiast</div>
+    <div class="profile-text">software engineer and pulp sci fi enthusiast</div>
   </div>
 
   
@@ -54,33 +54,32 @@
                 <div class="content">
                     
   <h2 id="software-engineer">Software Engineer</h2>
-<p>I am a Full Stack Engineer and Senior Computer Science student at <strong>Cal Poly Pomona</strong>. Currently serving as the sole architect for a non-profit startup, I specialize in building cloud-native SaaS platforms where <strong>strict data integrity</strong> meets <strong>modern UI/UX</strong>.</p>
-<p>My technical focus is bridging the gap between heavy backend logic and responsive frontend architecture. I build high-reliability systems using <strong>.NET 9 (C#)</strong> and <strong>Azure</strong>, while delivering complex user interfaces with <strong>Vue.js 3</strong> and the Composition API.</p>
-<hr>
-<h3 id="what-im-building">What I&rsquo;m Building</h3>
-<p>Currently, I serve as the <strong>Sole Architect and Developer</strong> for <strong>Timekeeping</strong>, a multi-tenant ERP and payroll platform designed to challenge commercial accounting software.</p>
-<p>In this role, I own the full engineering lifecycle:</p>
+<p>I&rsquo;m a senior CS student at Cal Poly Pomona and a full stack engineer at the Bytewish Foundation, a nonprofit building free, open-source business tools for small companies. I&rsquo;m the only developer, so I own everything: backend, frontend, infrastructure, and API design.</p>
+<p>Most of my day-to-day work is in <strong>C#/.NET 9</strong> and <strong>Vue.js 3</strong> on <strong>Azure</strong>, but I&rsquo;ve also built projects in React, TypeScript, Python, and Node.</p>
+<h3 id="what-im-working-on">What I&rsquo;m working on</h3>
+<p><strong>Timekeeping</strong> is a multi-tenant SaaS workforce management platform. It handles time tracking, automated payments, invoicing, PTO, and team management. Some of the more interesting technical pieces:</p>
 <ul>
-<li><strong>Complex Frontend Architecture:</strong> Building a reactive <strong>Vue.js</strong> interface with <code>Pinia</code> state management and a custom <code>Tiptap</code> visual email editor to empower non-technical users.</li>
-<li><strong>Temporal Engineering:</strong> Designing backend algorithms to handle sophisticated time calculations, including automated &ldquo;Midnight Splits&rdquo; for payroll and dynamic Daylight Saving Time adjustments.</li>
-<li><strong>Cloud Infrastructure:</strong> Managing Azure resources (App Service, Service Bus, SQL Database) and creating automated CI/CD pipelines via <strong>GitHub Actions</strong> for zero-downtime deployments.</li>
-<li><strong>Financial Infrastructure:</strong> Engineering high-performance API endpoints for on-the-fly <strong>ACH file generation</strong> and point-in-polygon tax jurisdictional analysis using <code>NetTopologySuite</code>.</li>
+<li>An automated payment pipeline built on Azure Service Bus that runs recurring pay schedules, generates NACHA-format ACH files, creates invoices from time logs, and processes PTO accruals.</li>
+<li>Multi-tenant data isolation on Azure SQL with Entity Framework Core. Each organization&rsquo;s financial data (bank details, tax IDs, billing rates) is encrypted and strictly separated.</li>
+<li>A public sales tax lookup tool with an interactive ArcGIS map. I imported Census TIGER shapefiles, ran coordinate transformations, and use SQL Server spatial queries to resolve tax rates down to the jurisdiction level for any address.</li>
+<li>A customizable email template system using Microsoft Graph API, with a TipTap rich text editor and Mustache variable rendering.</li>
+<li>CI/CD through GitHub Actions deploying to Azure App Service, with OAuth 2.0 via Microsoft Entra ID for auth.</li>
 </ul>
 <hr>
-<h3 id="my-background">My Background</h3>
-<p>My path to engineering wasn&rsquo;t traditional. Coming from a background in Business Administration, I realized that the most interesting problems weren&rsquo;t in <em>managing</em> processes, but in <em>automating</em> them.</p>
-<p>What started as writing custom scripts to optimize administrative workflows quickly evolved into a passion for software architecture. Today, I combine that business domain knowledge with deep technical expertise to translate vague requirements into production-ready software.</p>
+<p><strong>990-PF Tax Form Engine</strong> is my current project within the platform. The IRS 990-PF has 370+ fields, so I built a system where a single JSON config drives both the C# backend and the Vue frontend. A reflection-based accessor handles field mapping without hand-coding each one, and a rule interpreter evaluates visibility, validation, and calculations on both sides. Before this, I built a simpler 1099-NEC generator that pulls contractor data from Timekeeping.</p>
 <hr>
+<p><strong>Insights</strong> is a personal metrics tracking app I built with a team for CS 4800, using C#/.NET 9, React, TypeScript, and PostgreSQL. You log habits as booleans, numbers, or durations, and it automatically finds correlations between them using co-occurrence analysis, conditional averages, and median splits. Only patterns with a meaningful difference surface, so it filters out noise. <a href="https://insights-app-kj9l.onrender.com/">Try it out here.</a></p>
+<h3 id="background">Background</h3>
+<p>I started in business administration at Riverside City College before switching to CS. That business background actually helps more than I expected — a lot of what I build (payroll logic, invoicing, tax compliance) sits right at the intersection of software and business operations.</p>
 <h3 id="tech">Tech</h3>
 <ul>
-<li><strong>Languages:</strong> <code>C#</code> <code>TypeScript</code> <code>SQL</code> <code>Python</code> <code>JavaScript</code> <code>C++</code></li>
-<li><strong>Frameworks:</strong> <code>.NET 9</code> <code>Vue.js 3</code> <code>Pinia</code> <code>Tiptap</code> <code>Entity Framework Core</code></li>
-<li><strong>Cloud &amp; DevOps:</strong> <code>Azure</code> <code>GitHub Actions</code> <code>Docker</code> <code>Service Bus</code></li>
-<li><strong>Testing:</strong> <code>xUnit</code> <code>PyTest</code> <code>Playwright</code></li>
+<li><strong>Languages:</strong> C#, TypeScript, JavaScript, SQL, Python, Java, C++</li>
+<li><strong>Frameworks:</strong> .NET 9 / ASP.NET Core, Vue.js 3, React, Node.js, Express, Entity Framework Core</li>
+<li><strong>Cloud &amp; DevOps:</strong> Azure (App Service, SQL, Service Bus, Entra ID, Blob Storage), GitHub Actions, Docker</li>
+<li><strong>Tools:</strong> Git, OAuth 2.0, CI/CD, RESTful APIs</li>
 </ul>
-<hr>
-<h3 id="connect-with-me">Connect With Me</h3>
-<p>I am graduating in <strong>May 2026</strong> and looking for <strong>Software Engineering</strong> opportunities where I can solve complex technical challenges. While I am open to various domains, I have a particular passion for <strong>Open Source</strong> and <strong>Privacy-Focused</strong> software.</p>
+<h3 id="get-in-touch">Get in touch</h3>
+<p>I&rsquo;m graduating in May 2026 and looking for software engineering roles. I&rsquo;m especially interested in open source and infrastructure work, but I&rsquo;m open to a lot of different domains. Best way to reach me is <a href="mailto:lindsay@kislingbury.com">lindsay@kislingbury.com</a>.</p>
 
 
                 </div>

@@ -27,8 +27,8 @@
 
 body {
   font-family: var(--font-body);
-  font-weight: 300;
-  line-height: 1.65;
+  font-weight: 400;
+  line-height: 1.7;
   margin: 0;
   padding: 0;
   color: var(--text-color);
@@ -52,6 +52,7 @@ h3 { font-weight: 500; font-size: 1.35rem; margin-bottom: 0.2rem; }
 
 p, li {
   font-family: var(--font-body);
+  font-weight: 400;
   font-size: 1.05rem;
   margin-bottom: 1rem;
 }
@@ -145,7 +146,7 @@ blockquote {
 
     .profile-text {
       font-family: var(--font-body);
-      font-weight: 300;
+      font-weight: 400;
       font-size: 0.95em;
       color: var(--text-color);
       opacity: 0.8;
