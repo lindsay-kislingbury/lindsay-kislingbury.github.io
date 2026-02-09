@@ -10,7 +10,7 @@ draft: false
 
 **Frameworks:** .NET 9 / ASP.NET Core, React, Vue.js 3, Node.js, Express, Entity Framework Core
 
-**Cloud & Infrastructure:** Azure (App Service, SQL, Service Bus, Entra ID, Blob Storage), GitHub Actions, Docker
+**Cloud & Infrastructure:** Azure (App Service, SQL, Service Bus, Entra ID, Blob Storage), GitHub Actions
 
 **Tools:** Git, RESTful APIs, OAuth 2.0, CI/CD, Multi-Tenant Architecture, Agile Development
 

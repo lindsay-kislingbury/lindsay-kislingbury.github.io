@@ -36,7 +36,7 @@ I started in business administration at Riverside City College before switching 
 
 - **Languages:** C#, TypeScript, JavaScript, SQL, Python, Java, C++
 - **Frameworks:** .NET 9 / ASP.NET Core, Vue.js 3, React, Node.js, Express, Entity Framework Core
-- **Cloud & DevOps:** Azure (App Service, SQL, Service Bus, Entra ID, Blob Storage), GitHub Actions, Docker
+- **Cloud & DevOps:** Azure (App Service, SQL, Service Bus, Entra ID, Blob Storage), GitHub Actions
 - **Tools:** Git, OAuth 2.0, CI/CD, RESTful APIs
 
 ### Get in touch
