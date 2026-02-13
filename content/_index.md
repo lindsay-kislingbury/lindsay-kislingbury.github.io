@@ -6,7 +6,7 @@ draft: false
 
 ## Software Engineer
 
-I'm a senior CS student at Cal Poly Pomona and a full stack engineer at the Bytewish Foundation, a nonprofit building free, open-source business tools for small companies. I'm the only developer, so I own everything: backend, frontend, infrastructure, and API design.
+I'm a senior CS student at Cal Poly Pomona and a full stack engineer at the Bytewish Foundation, a nonprofit building free, open-source business tools for small companies. I'm the sole developer, so I own everything: backend, frontend, infrastructure, and API design.
 
 Most of my day-to-day work is in **C#/.NET 9** and **Vue.js 3** on **Azure**, but I've also built projects in React, TypeScript, Python, and Node.
 
@@ -34,10 +34,10 @@ I started in business administration at Riverside City College before switching 
 
 ### Tech
 
-- **Languages:** C#, TypeScript, JavaScript, SQL, Python, Java, C++
+- **Languages:** C#, TypeScript, JavaScript, SQL, Python, Java, C++, C, HTML, CSS
 - **Frameworks:** .NET 9 / ASP.NET Core, Vue.js 3, React, Node.js, Express, Entity Framework Core
-- **Cloud & DevOps:** Azure (App Service, SQL, Service Bus, Entra ID, Blob Storage), GitHub Actions
-- **Tools:** Git, OAuth 2.0, CI/CD, RESTful APIs
+- **Cloud & Infrastructure:** Azure (App Service, SQL, Service Bus, Entra ID, Blob Storage), GitHub Actions, CI/CD
+- **Tools:** Git, Linux, SQL Server, Postman, OAuth 2.0, RESTful APIs, Multi-Tenant Architecture
 
 ### Get in touch
 

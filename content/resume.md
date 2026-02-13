@@ -6,13 +6,13 @@ draft: false
 
 ## Technical Skills
 
-**Languages:** C#, TypeScript, JavaScript, SQL, Python, Java, C++, HTML, CSS
+**Languages:** C#, TypeScript, JavaScript, SQL, Python, Java, C++, C, HTML, CSS
 
 **Frameworks:** .NET 9 / ASP.NET Core, React, Vue.js 3, Node.js, Express, Entity Framework Core
 
-**Cloud & Infrastructure:** Azure (App Service, SQL, Service Bus, Entra ID, Blob Storage), GitHub Actions
+**Cloud & Infrastructure:** Azure (App Service, SQL, Service Bus, Entra ID, Blob Storage), GitHub Actions, CI/CD
 
-**Tools:** Git, RESTful APIs, OAuth 2.0, CI/CD, Multi-Tenant Architecture, Agile Development
+**Tools:** Git, Linux, SQL Server, Postman, OAuth 2.0, RESTful APIs, Multi-Tenant Architecture
 
 ## Education
 
@@ -31,9 +31,9 @@ Dean's List 2018–2020
 ### Full Stack Software Engineer
 **Bytewish Foundation** | *Feb 2024 – Present*
 
-`C#` `.NET 9` `Vue.js 3` `JavaScript` `SQL` `Azure` `Entity Framework Core`
+`C#` `.NET 9` `Vue.js 3` `JavaScript` `SQL` `Azure` `Entity Framework Core` 
 
-- Solo-building a multi-tenant SaaS workforce management platform (time tracking, automated payments, invoicing, PTO) for a nonprofit focused on free, open-source tools for small businesses. Handling all architecture decisions, backend, frontend, and API design.
+- Sole developer on a multi-tenant SaaS workforce management platform (time tracking, automated payments, invoicing, PTO) for a nonprofit focused on free, open-source tools for small businesses. Handling all architecture decisions, backend, frontend, and API design.
 - Designed tenant isolation on Azure SQL with Entity Framework Core so each organization's financial data (bank details, tax IDs, billing rates) stays strictly separated and encrypted at rest.
 - Built an automated payment pipeline using Azure Service Bus: the system runs recurring pay schedules, generates NACHA-format ACH files, produces invoices from time logs, and processes PTO accruals, all without manual intervention.
 - Currently developing a 990-PF tax form engine for a 370+ field IRS form. Built a single JSON config that drives both the C# backend and Vue frontend, a reflection-based field accessor to avoid hand-coding mappings, and a rule interpreter that evaluates visibility, validation, and calculation logic on both sides. Previously built a simpler 1099-NEC generator using the same platform data.
@@ -51,3 +51,7 @@ Built a personal metrics tracker where users log habits as booleans, numbers, or
 `Python`
 
 Developed a simulation where a player navigates procedurally generated terrain, managing resources and trading with NPCs. Used abstract base classes, factory pattern, and composition to keep AI behaviors (brain, vision, trader types) modular and swappable.
+
+### Chat Server
+`C` `POSIX Sockets` `Pthreads` `Linux`
+Built a multi-client TCP chat server supporting up to 10 concurrent users with threaded connection handling, mutex-synchronized broadcast messaging, timestamped chat history logging, and graceful shutdown via signal handling (SIGINT/SIGTERM).
